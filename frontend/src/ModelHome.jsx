@@ -16,7 +16,7 @@ function ModelHome() {
           <div className="article">article</div>
         </article>
       </div>
-      <footer />
+      <footer> footer</footer>
     </body>
   );
 }

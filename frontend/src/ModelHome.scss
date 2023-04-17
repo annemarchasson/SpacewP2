@@ -42,3 +42,48 @@ $breakpoint-mobilemax: 600px;
     height: 100px;
   }
 }
+
+header {
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  border: solid;
+  height: 54px;
+}
+footer {
+  display: none;
+}
+.contenair {
+  border: solid black;
+}
+.contenair-card {
+  border: solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 607px;
+}
+.contenair-article {
+  border: solid black;
+  display: none;
+  border: solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 608px;
+    justify-content: space-around;
+    
+}
+.card {
+  border: solid blue;
+  width: 84%;
+  height: 209px;
+  margin: 53px 5px 30px 5px;
+}
+.article {
+  border: solid blue;
+  
+    height: 150px;
+    width: 80%;
+    
+}
