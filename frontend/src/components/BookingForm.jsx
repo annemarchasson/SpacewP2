@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import PropTypes from "prop-types";
 import "./BookingFormScss.scss";
 
 export default function BookingForm() {
@@ -262,5 +261,3 @@ export default function BookingForm() {
     </div>
   );
 }
-
-
