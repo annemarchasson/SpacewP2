@@ -48,11 +48,6 @@ export default function BookingForm() {
       );
     } else {
       alert();
-      /*
-   this.context.router.push({
-     pathname: '/confirmation',
- })
-   */
     }
   };
 
