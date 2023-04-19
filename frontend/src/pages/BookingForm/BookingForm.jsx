@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import "./BookingFormScss.scss";
+import { NavLink } from "react-router-dom";
+import "@pages/BookingForm/BookingFormScss.scss";
 
 export default function BookingForm() {
   const [firstname, setFirstname] = useState("");
@@ -253,6 +254,7 @@ export default function BookingForm() {
           </button>
         </div>
       </form>
+      <NavLink to="/">Retour</NavLink>
     </div>
   );
 }

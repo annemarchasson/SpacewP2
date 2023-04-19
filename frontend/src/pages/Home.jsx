@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import axios from "axios";
+import { NavLink } from "react-router-dom";
 import Card from "../components/Compteurcard/Card";
 
 function Cards() {
@@ -42,6 +43,8 @@ function Cards() {
               <Card key={launchSelected.id} data={launchSelected} />
             ))
         : ""}
+      <NavLink to="Payment">Aller paiment</NavLink>
+      <NavLink to="Booking-form">Aller booking</NavLink>
     </>
   );
 }
