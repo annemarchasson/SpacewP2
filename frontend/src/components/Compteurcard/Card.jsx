@@ -8,8 +8,8 @@ import PropTypes from "prop-types";
 function Card({ data }) {
   dayjs.extend(localizedFormat);
 
-  const date = dayjs().format("LLLL");
-  //  console.log(date);
+  const date = dayjs().format("ll");
+
   return (
     <div className="card-main">
       <div className="card-content">
