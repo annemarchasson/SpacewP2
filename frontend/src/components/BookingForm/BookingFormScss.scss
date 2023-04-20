@@ -12,38 +12,44 @@ $color-dark: #221e40;
 body {
   background-color: $color-background;
 }
-h2 {
+.formbook-h2 {
   font-family: $font-title;
-  font-size: 14px;
+  font-size: 12px;
   color: $color-light;
   letter-spacing: 8px;
   padding: 10px 0px 10px 6px;
   margin: 0%;
 }
 
-.contenair-form-identity,
-.contenair-form-condition,
-.contenair-form-seat {
+.contenair-formbook-identity,
+.contenair-formbook-condition,
+.contenair-formbook-seat {
   width: 264px;
   background: $color-Bck-div;
   box-shadow: 0px 4px 4px $color-shadows-dark;
   border-radius: 10px;
   margin-bottom: 12px;
 }
-.contenair-form-identity {
+.contenair-formbook-identity {
   height: 156px;
+  text-align: center;
 }
-.contenair-form-condition {
-  height: 120px;
+.contenair-formbook-condition {
+  flex-direction: column;
+    height: 127px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
 }
-.contenair-form-seat {
+.contenair-formbook-seat {
   height: 160px;
+  text-align: center;
 }
-.input-class,
-.option-health,
-.label-style,
-.label-style-seat,
-.label-style-seat-price {
+.formbook-input-class,
+.formbook-option-health,
+.formbook-label-style,
+.formbook-label-style-seat,
+.formbook-label-style-seat-price {
   font-family: $font-content;
   color: $color-dark;
   width: 216px;
@@ -54,25 +60,31 @@ h2 {
   border: none;
   font-size: 14px;
 }
-.option-health {
+.formbook-option-health {
   height: 18px;
 }
-.label-style-seat {
+.formbook-label-style-seat {
   width: 70px;
   padding-bottom: 3px;
 }
-.label-style-seat-price {
+.formbook-label-style-seat-price {
   width: 106px;
   padding-bottom: 3px;
 }
-.label-18 {
+.formbook-contenair-18{
+  display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+.formbook-label-18 {
   font-family: "Inria Sans", sans-serif;
   font-size: 14px;
   color: $color-light;
   border-radius: 2px;
   border: none;
 }
-.input-check {
+.formbook-input-check {
   font-family: "Inria Sans", sans-serif;
   color: $color-dark;
   background: $color-light;
@@ -80,20 +92,21 @@ h2 {
   border-radius: 2px;
   border: none;
 }
-.box-total-seat {
+.formbook-box-total-seat {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
-.seat-img-text {
+.formbook-seat-img-text {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
   height: 88px;
+  margin: 10px;
 }
 
-.button-book {
+.formbook-button-book {
   width: 74px;
   height: 34px;
   background: $color-Bck-btn;
@@ -102,11 +115,11 @@ h2 {
   font-family: $font-content;
   font-size: 17px;
   font-weight: 700;
-  margin: 2% 0% 0% 46%;
+  margin: 2% 0% 0% 60%;
   padding: 0;
 }
 
-.box-img-navette {
+.formbook-box-img-navette {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -117,36 +130,43 @@ h2 {
   background-size: contain;
   background-origin: content-box;
   background-position: -2px;
+  margin: 4px;
 }
-.first-row {
-  margin-left: 20px;
-  margin-bottom: 16px;
-}
-.second-row,
-.third-row {
+.formbook-first-row {
   margin-left: 2px;
   margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
 }
-.seatA {
+.formbook-second-row,
+.formbook-third-row {
+  margin-left: 2px;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+}
+.formbook-seatA {
   color: #9886b3;
-  font-size: 18px;
+  font-size: 12px;
   font-weight: bold;
-  height: 16px;
   transform: rotate(90deg);
   transform-origin: bottom;
   cursor: context-menu;
+  padding: 0%;
+  margin: -11%;
 }
-.seatA:hover {
+.formbook-seatA:hover {
   color: #361cf8;
   transform: translateY(-2px);
   transform: rotate(90deg);
   transform-origin: bottom;
+  border: none;
 }
-.seatA:active {
+.formbook-seatA:active {
   color: #1a099a;
   transform: rotate(90deg);
   transform-origin: bottom;
 }
-.seatA:target {
+.formbook-seatA:target {
   color: red;
 }
