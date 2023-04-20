@@ -1,16 +1,16 @@
 import { Routes, Route } from "react-router-dom";
+import Payment from "@pages/PaymentForm/Payment";
 import Home from "./pages/Home";
+import BookingForm from "./pages/BookingForm/BookingForm";
 import "./App.css";
-import BookingForm from "./components/BookingForm/BookingForm";
 
 function App() {
   return (
-    <>
-      <BookingForm />
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
-    </>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/Booking-form" element={<BookingForm />} />
+      <Route path="/Payment" element={<Payment />} />
+    </Routes>
   );
 }
 export default App;
