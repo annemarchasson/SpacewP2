@@ -9,7 +9,6 @@ function Card({ data }) {
   dayjs.extend(localizedFormat);
 
   const date = dayjs().format("ll");
-  //  console.log(date);
   return (
     <div className="card-main">
       <div className="card-content">
