@@ -8,9 +8,9 @@ function App() {
   return (
     <>
       <NavBar />
-      <BookingForm />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/Booking-form" element={<BookingForm />} />
       </Routes>
     </>
   );
