@@ -61,7 +61,7 @@ function Timer({ data }) {
 }
 Timer.propTypes = {
   data: PropTypes.shape({
-    net: PropTypes.string.isRequired,
+    departure_at: PropTypes.string.isRequired,
   }).isRequired,
 };
 export default Timer;

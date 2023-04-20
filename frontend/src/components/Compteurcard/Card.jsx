@@ -33,9 +33,8 @@ function Card({ data }) {
 Card.propTypes = {
   data: PropTypes.shape({
     name: PropTypes.string.isRequired,
-    mission: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
-    pad: PropTypes.string.isRequired,
+    map_link: PropTypes.string.isRequired,
   }).isRequired,
 };
 

@@ -17,7 +17,6 @@ function Cards() {
   useEffect(() => {
     axios.get("http://localhost:5000/fly").then((data) => setData(data.data));
   }, []);
-  console.log(apiData);
 
   return (
     <>
