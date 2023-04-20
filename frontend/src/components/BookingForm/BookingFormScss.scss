@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,700;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,700;1,300&family=Saira+Condensed:wght@100;200;500&display=swap");
+
+$font-title: "Saira Condensed", sans-serif;
+$font-content: "Inria Sans", sans-serif;
+$color-Bck-div: #141d3c;
+$color-Bck-btn: #4d51aa;
+$color-background: #1e1e1e;
+$color-shadows-dark: #101010;
+$color-light: #d7d7d7;
+$color-dark: #221e40;
+body {
+  background-color: $color-background;
+}
+.formbook-h2 {
+  font-family: $font-title;
+  font-size: 12px;
+  color: $color-light;
+  letter-spacing: 8px;
+  padding: 10px 0px 10px 6px;
+  margin: 0%;
+}
+
+.contenair-formbook-identity,
+.contenair-formbook-condition,
+.contenair-formbook-seat {
+  width: 264px;
+  background: $color-Bck-div;
+  box-shadow: 0px 4px 4px $color-shadows-dark;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+.contenair-formbook-identity {
+  height: 156px;
+  text-align: center;
+}
+.contenair-formbook-condition {
+  flex-direction: column;
+    height: 127px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+.contenair-formbook-seat {
+  height: 160px;
+  text-align: center;
+}
+.formbook-input-class,
+.formbook-option-health,
+.formbook-label-style,
+.formbook-label-style-seat,
+.formbook-label-style-seat-price {
+  font-family: $font-content;
+  color: $color-dark;
+  width: 216px;
+  height: 16px;
+  background: $color-light;
+  box-shadow: 0px 4px 4px $color-shadows-dark;
+  border-radius: 2px;
+  border: none;
+  font-size: 14px;
+}
+.formbook-option-health {
+  height: 18px;
+}
+.formbook-label-style-seat {
+  width: 70px;
+  padding-bottom: 3px;
+}
+.formbook-label-style-seat-price {
+  width: 106px;
+  padding-bottom: 3px;
+}
+.formbook-contenair-18{
+  display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+.formbook-label-18 {
+  font-family: "Inria Sans", sans-serif;
+  font-size: 14px;
+  color: $color-light;
+  border-radius: 2px;
+  border: none;
+}
+.formbook-input-check {
+  font-family: "Inria Sans", sans-serif;
+  color: $color-dark;
+  background: $color-light;
+  box-shadow: 1px 1px 4px #1e1e1e;
+  border-radius: 2px;
+  border: none;
+}
+.formbook-box-total-seat {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.formbook-seat-img-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 88px;
+  margin: 10px;
+}
+
+.formbook-button-book {
+  width: 74px;
+  height: 34px;
+  background: $color-Bck-btn;
+  box-shadow: 2px 2px 3px $color-shadows-dark;
+  border-radius: 4px;
+  font-family: $font-content;
+  font-size: 17px;
+  font-weight: 700;
+  margin: 2% 0% 0% 60%;
+  padding: 0;
+}
+
+.formbook-box-img-navette {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  height: 101px;
+  background-image: url(https://i.postimg.cc/3Rw6Nkmg/navette.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-origin: content-box;
+  background-position: -2px;
+  margin: 4px;
+}
+.formbook-first-row {
+  margin-left: 2px;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+}
+.formbook-second-row,
+.formbook-third-row {
+  margin-left: 2px;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+}
+.formbook-seatA {
+  color: #9886b3;
+  font-size: 12px;
+  font-weight: bold;
+  transform: rotate(90deg);
+  transform-origin: bottom;
+  cursor: context-menu;
+  padding: 0%;
+  margin: -11%;
+}
+.formbook-seatA:hover {
+  color: #361cf8;
+  transform: translateY(-2px);
+  transform: rotate(90deg);
+  transform-origin: bottom;
+  border: none;
+}
+.formbook-seatA:active {
+  color: #1a099a;
+  transform: rotate(90deg);
+  transform-origin: bottom;
+}
+.formbook-seatA:target {
+  color: red;
+}
