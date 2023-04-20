@@ -7,7 +7,7 @@ function Timer({ data }) {
 
   const getChrono = () => {
     const now = new Date().getTime();
-    const countdownDate = new Date(data.net).getTime();
+    const countdownDate = new Date(data.departure_at).getTime();
     const distanceBase = countdownDate - now;
 
     const days = Math.floor(distanceBase / (1000 * 60 * 60 * 24));
