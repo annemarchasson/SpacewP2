@@ -1,0 +1,79 @@
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 100px auto;
+  background-color: lightgrey;
+  padding: 40px 0;
+}
+
+.billing {
+  display: flex;
+  flex-direction: column;
+}
+.billing input {
+  padding: 10px;
+  width: 100%;
+}
+.billing h1 {
+  margin-bottom: 20px;
+}
+
+.payment {
+  display: flex;
+  flex-direction: column;
+}
+.payment input {
+  padding: 10px;
+  width: 100%;
+}
+.payment h1 {
+  margin-bottom: 20px;
+}
+
+.icon-container ul {
+  display: flex;
+  list-style: none;
+  padding: 10px 0;
+}
+
+.icon-container li {
+  margin-right: 10px;
+}
+
+.cvv {
+  display: flex;
+  justify-content: space-between;
+}
+.cvv input {
+  width: 100%;
+}
+
+.zip {
+  display: flex;
+  justify-content: space-between;
+}
+.zip input {
+  width: 100%;
+}
+
+.btn-payment {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-payment button {
+  padding: 10px;
+  width: 50%;
+  margin-top: 30px;
+}
+.content-first-payment {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
