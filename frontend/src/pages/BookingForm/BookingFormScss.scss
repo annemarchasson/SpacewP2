@@ -12,6 +12,15 @@ $color-dark: #221e40;
 body {
   background-color: $color-background;
 }
+
+root {
+  margin: 0px;
+  position: absolute;
+  top: 0px;
+  padding: 0px;
+  width: 100%;
+}
+
 h2 {
   font-family: $font-title;
   font-size: 14px;

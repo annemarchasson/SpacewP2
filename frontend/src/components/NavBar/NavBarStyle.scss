@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,700;1,300&family=Saira+Condensed:wght@100;200;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,700;1,300&display=swap");
+
+$font-content: "Inria Sans", sans-serif;
+$color-Bck-div: #141d3c;
+$color-Bck-btn: #4d51aa;
+$color-background: #1e1e1e;
+$color-shadows-dark: #101010;
+$color-light: #d7d7d7;
+$color-dark: #221e40;
+
+* {
+  margin: 0;
+  padding: 0;
+  color: #d7d7d7;
+}
+
+#root {
+  margin: 0px;
+  position: absolute;
+  top: 0px;
+  padding: 0px;
+}
+
+nav {
+  background-image: url("./images/espace.jpg");
+  background-position: 40%;
+  height: 300px;
+  width: 100%;
+}
+
+.navcontainer1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navtitle {
+  $breackpoint-max: 390px;
+  font-family: "Inria Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 94px;
+  line-height: 129.2%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.11em;
+  color: #ffffff;
+  margin: 20px;
+}
+
+.navlogo {
+  width: 150px;
+  height: 150px;
+  margin-right: 350px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar li {
+  list-style: none;
+  padding: 0 60px;
+  position: relative;
+  font-size: 2rem;
+  font-family: "Inria Sans";
+  color: #d7d7d7;
+}
+
+a {
+  color: #d7d7d7;
+  text-decoration: none;
+}
+a:hover {
+  color: #4d51aa;
+}
+
+.navcontainer2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navtitle2 {
+  font-style: italic;
+  font-weight: 700;
+  font-size: 75px;
+  line-height: 33px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 10px;
+  color: #ffffff;
+}
+
+.navtexte {
+  width: 917px;
+  height: 93px;
+  font-family: "Inria Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 33px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  padding: 4.3px;
+}
