@@ -1,20 +1,57 @@
-.card-main {
-  // background: url(https://img.freepik.com/photos-gratuite/belles-etoiles-brillantes-dans-ciel-nocturne_181624-622.jpg?size=626&ext=jpg&uid=R58535683&ga=GA1.1.1948216595.1679045790&semt=sph) center/cover;
-  display: flex;
-  border-radius: 10px;
-  color: white;
-  width: 70%;
-  margin: 50px auto;
-  background-color: black;
+@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,700;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,700;1,300&family=Saira+Condensed:wght@100;200;500&display=swap");
+
+$font-title: "Saira Condensed", sans-serif;
+$font-content: "Inria Sans", sans-serif;
+$color-Bck-div: #141d3c;
+$color-Bck-btn: #4d51aa;
+$color-background: #1e1e1e;
+$color-shadows-dark: #101010;
+$color-light: #d7d7d7;
+$color-dark: #221e40;
+
+$breakpoints: (
+  mobile: 600px,
+);
+
+@mixin mobile-only {
+  @media screen and (max-width: map-get($breakpoints, mobile)) {
+    @content;
+  }
 }
 
+.card-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: $color-light;
+  width: 90%;
+  margin: 50px auto;
+  background-color: $color-background;
+  box-shadow: 0px 4px 4px $color-shadows-dark;
+  border-radius: 10px;
+  font-family: $font-content;
+}
+
+.h2-card {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  color: $color-Bck-btn;
+  text-shadow: 6px 5px 5px $color-shadows-dark;
+  text-align: center;
+  padding-bottom: 6%;
+}
 .card-content {
   display: flex;
-  text-align: center;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 100%;
 }
 
 .card-content img {
-  width: 250px;
+  width: 40%;
   border-radius: 10px;
 }
 
@@ -22,12 +59,44 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: 20px;
   padding: 30px;
+  margin-right: auto;
+  margin-left: auto;
 }
 .infos-card p {
   padding: 18px;
 }
+.date-card {
+  font-family: $font-content;
+  font-size: 22px;
+}
 .card-button {
   padding: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+.button-maps-card {
+  width: 100px;
+  height: 50px;
+  background: $color-Bck-btn;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.38);
+  border-radius: 6px;
+  color: #d7d7d7;
+  font-family: "Inria Sans", sans-serif;
+  font-size: 26px;
+  font-weight: bold;
+  margin: 12%;
+}
+.button-go-card {
+  width: 134px;
+  height: 50px;
+  background: #4d51aa;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.38);
+  border-radius: 6px;
+  color: #d7d7d7;
+  font-family: "Inria Sans", sans-serif;
+  font-size: 26px;
+  font-weight: bold;
+  margin: 12%;
 }
