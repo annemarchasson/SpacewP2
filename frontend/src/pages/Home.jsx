@@ -37,8 +37,7 @@ function Cards() {
               <Card key={launchSelected.id} data={launchSelected} />
             ))
         : ""}
-      <NavLink to="Payment">Aller paiment</NavLink>
-      <NavLink to="Booking-form">Aller booking</NavLink>
+      <NavLink to="Payment-form">Go to Payment</NavLink>
     </>
   );
 }
