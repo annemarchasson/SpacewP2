@@ -1,14 +1,18 @@
 import { Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
 import "./App.css";
-import BookingForm from "./components/BookingForm";
+import BookingForm from "@components/BookingForm/BookingForm";
+import Payment from "@pages/PaymentForm/Payment";
+import NavBar from "./components/NavBar/NavBar";
+import Home from "./pages/Home";
 
 function App() {
   return (
     <>
-      <BookingForm />
+      <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/Booking-form" element={<BookingForm />} />
+        <Route path="/Payment-form" element={<Payment />} />
       </Routes>
     </>
   );

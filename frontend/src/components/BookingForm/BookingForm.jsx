@@ -52,17 +52,17 @@ export default function BookingForm() {
   };
 
   return (
-    <div className="form-booking">
+    <div className="formbook-booking">
       <form
         onSubmit={(e) => {
           handleSubmit(e);
         }}
       >
-        <div className="contenair-form-identity">
-          <h2>Identity</h2>
+        <div className="contenair-formbook-identity">
+          <h2 className="formbook-h2">Identity</h2>
           <div>
             <input
-              className="input-class"
+              className="formbook-input-class"
               type="text"
               name="First-Name"
               placeholder="First-Name"
@@ -75,7 +75,7 @@ export default function BookingForm() {
           </div>
           <div>
             <input
-              className="input-class"
+              className="formbook-input-class"
               type="text"
               name="Last-Name"
               placeholder="Last-Name"
@@ -88,7 +88,7 @@ export default function BookingForm() {
           </div>
           <div>
             <input
-              className="input-class"
+              className="formbook-input-class"
               type="email"
               name="email"
               placeholder="Email"
@@ -101,7 +101,7 @@ export default function BookingForm() {
           </div>
           <div>
             <input
-              className="input-class"
+              className="formbook-input-class"
               type="tel"
               name="phonenumber"
               placeholder="Phone Number"
@@ -113,12 +113,12 @@ export default function BookingForm() {
             />
           </div>
         </div>
-        <div className="contenair-form-condition">
-          <h2>Access Requierement</h2>
-          <div>
-            <p className="label-18">I am over 18: </p>
+        <div className="contenair-formbook-condition">
+          <h2 className="formbook-h2">Access Requierement</h2>
+          <div className="formbook-contenair-18">
+            <p className="formbook-label-18">I am over 18: </p>
             <input
-              className="input-check"
+              className="formbook-input-check"
               id="checkbox1"
               name="checkbox1"
               type="checkbox"
@@ -130,7 +130,7 @@ export default function BookingForm() {
             />
           </div>
           <select
-            className="option-health"
+            className="formbook-option-health"
             name="health"
             id="health-select"
             defaultValue="DEFAULT"
@@ -139,29 +139,29 @@ export default function BookingForm() {
               handleHealthChange(evt);
             }}
           >
-            <option className="option-health" value="DEFAULT">
+            <option className="formbook-option-health" value="DEFAULT">
               --Please choose an option--
             </option>
-            <option className="option-health" value="nohealth">
+            <option className="formbook-option-health" value="nohealth">
               I have no health concerns
             </option>
-            <option className="option-health" value="health">
+            <option className="formbook-option-health" value="health">
               I have health concerns
             </option>
           </select>
         </div>
-        <div className="contenair-form-seat">
-          <h2>Seat</h2>
-          <div className="box-total-seat">
-            <div className="seat-img-text">
-              <p className="label-style-seat">Seat n° {seat} </p>
-              <p className="label-style-seat-price">Price 100 000€ </p>
+        <div className="contenair-formbook-seat">
+          <h2 className="formbook-h2">Seat</h2>
+          <div className="formbook-box-total-seat">
+            <div className="formbook-seat-img-text">
+              <p className="formbook-label-style-seat">Seat n° {seat} </p>
+              <p className="formbook-label-style-seat-price">Price 100 000€ </p>
             </div>
-            <div className="box-img-navette">
-              <div className="first-row">
+            <div className="formbook-box-img-navette">
+              <div className="formbook-first-row">
                 <button
                   type="button"
-                  className="seatA"
+                  className="formbook-seatA"
                   id="A1"
                   onClick={(e) => {
                     handleSeatChange(e);
@@ -171,7 +171,7 @@ export default function BookingForm() {
                 </button>
                 <button
                   type="button"
-                  className="seatA"
+                  className="formbook-seatA"
                   id="A2"
                   onClick={(e) => {
                     handleSeatChange(e);
@@ -180,10 +180,10 @@ export default function BookingForm() {
                   ⬒
                 </button>
               </div>
-              <div className="second-row">
+              <div className="formbook-second-row">
                 <button
                   type="button"
-                  className="seatA"
+                  className="formbook-seatA"
                   id="A3"
                   onClick={(e) => {
                     handleSeatChange(e);
@@ -193,7 +193,7 @@ export default function BookingForm() {
                 </button>
                 <button
                   type="button"
-                  className="seatA"
+                  className="formbook-seatA"
                   id="A4"
                   onClick={(e) => {
                     handleSeatChange(e);
@@ -202,10 +202,10 @@ export default function BookingForm() {
                   ⬒
                 </button>
               </div>
-              <div className="third-row">
+              <div className="formbook-third-row">
                 <button
                   type="button"
-                  className="seatA"
+                  className="formbook-seatA"
                   id="A5"
                   onClick={(e) => {
                     handleSeatChange(e);
@@ -215,7 +215,7 @@ export default function BookingForm() {
                 </button>
                 <button
                   type="button"
-                  className="seatA"
+                  className="formbook-seatA"
                   id="A6"
                   onClick={(e) => {
                     handleSeatChange(e);
@@ -225,7 +225,7 @@ export default function BookingForm() {
                 </button>
                 <button
                   type="button"
-                  className="seatA"
+                  className="formbook-seatA"
                   id="A7"
                   onClick={(e) => {
                     handleSeatChange(e);
@@ -235,7 +235,7 @@ export default function BookingForm() {
                 </button>
                 <button
                   type="button"
-                  className="seatA"
+                  className="formbook-seatA"
                   id="A8"
                   onClick={(e) => {
                     handleSeatChange(e);
@@ -247,8 +247,8 @@ export default function BookingForm() {
             </div>
           </div>
         </div>
-        <div className="contenair-form-button">
-          <button type="button" className="button-book">
+        <div className="contenair-formbook-button">
+          <button type="button" className="formbook-button-book">
             Book
           </button>
         </div>
