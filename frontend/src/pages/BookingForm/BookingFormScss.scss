@@ -9,144 +9,282 @@ $color-background: #1e1e1e;
 $color-shadows-dark: #101010;
 $color-light: #d7d7d7;
 $color-dark: #221e40;
-body {
+
+$breakpoints: (
+  mobile: 600px,
+);
+
+@mixin mobile-only {
+  @media screen and (max-width: map-get($breakpoints, mobile)) {
+    @content;
+  }
+}
+
+.formbook-booking {
+  width: 100%;
+  height: 100%;
   background-color: $color-background;
 }
-h2 {
-  font-family: $font-title;
-  font-size: 14px;
-  color: $color-light;
-  letter-spacing: 8px;
+.formbook {
+  width: 100%;
+  height: 120%;
+  display: flex;
+  align-items: center;
+  place-content: center;
+  @include mobile-only {
+    height: 100%;
+  }
+}
+.formbook-contenair-total {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  align-items: self-start;
+  padding-top: 10%;
+  @include mobile-only {
+    flex-direction: column;
+    padding-top: 0%;
+    align-items: center;
+    height: 80%;
+    margin-right: 4%;
+    margin-left: 4%;
+    width: 90%;
+  }
+}
+.formbook-h2 {
+  font-family: "Saira Condensed", sans-serif;
+  font-size: 19px;
+  color: #d7d7d7;
+  letter-spacing: 10px;
   padding: 10px 0px 10px 6px;
   margin: 0%;
 }
 
-.contenair-form-identity,
-.contenair-form-condition,
-.contenair-form-seat {
-  width: 264px;
-  background: $color-Bck-div;
-  box-shadow: 0px 4px 4px $color-shadows-dark;
+.contenair-formbook-identity {
+  display: flex;
+  flex-direction: column;
+
+  background: #141d3c;
+  box-shadow: 0px 4px 4px #101010;
   border-radius: 10px;
   margin-bottom: 12px;
+  text-align: center;
+  height: 300px;
+  width: 26%;
+  @include mobile-only {
+    width: 360px;
+  }
 }
-.contenair-form-identity {
-  height: 156px;
+.contenair-formbook-condition {
+  display: flex;
+  flex-direction: column;
+  background: #141d3c;
+  box-shadow: 0px 4px 4px #101010;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  text-align: center;
+  align-items: center;
+  width: 35%;
+  height: 235px;
+  @include mobile-only {
+    width: 360px;
+    height: 300px;
+  }
 }
-.contenair-form-condition {
-  height: 120px;
+.contenair-formbook-seat {
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  background: #141d3c;
+  box-shadow: 0px 4px 4px #101010;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  text-align: center;
+  width: 26%;
+  @include mobile-only {
+    width: 360px;
+  }
 }
-.contenair-form-seat {
-  height: 160px;
-}
-.input-class,
-.option-health,
-.label-style,
-.label-style-seat,
-.label-style-seat-price {
-  font-family: $font-content;
-  color: $color-dark;
-  width: 216px;
-  height: 16px;
-  background: $color-light;
-  box-shadow: 0px 4px 4px $color-shadows-dark;
+
+.formbook-input-class,
+.formbook-option-health,
+.formbook-label-style,
+.formbook-label-style-seat,
+.formbook-label-style-seat-price {
+  font-family: "Inria Sans", sans-serif;
+  color: #221e40;
+  width: 88%;
+  height: 26px;
+  background: #d7d7d7;
+  box-shadow: 0px 4px 4px #101010;
   border-radius: 2px;
   border: none;
-  font-size: 14px;
+  font-size: 18px;
+  margin-top: 20px;
+
+  @include mobile-only {
+    font-family: $font-content;
+    color: $color-dark;
+    width: 89%;
+    height: 25px;
+    background: $color-light;
+    box-shadow: 0px 4px 4px $color-shadows-dark;
+    border-radius: 2px;
+    border: none;
+    font-size: 14px;
+    margin-top: 8px;
+  }
 }
-.option-health {
-  height: 18px;
+.formbook-option-health {
+  height: 30px;
+  @include mobile-only {
+    height: 18px;
+  }
 }
-.label-style-seat {
-  width: 70px;
+.formbook-option-health2 {
+  font-size: 15px;
+
+  @include mobile-only {
+    font-size: 10px;
+  }
+}
+.formbook-label-style-seat {
+  width: 90px;
   padding-bottom: 3px;
+  @include mobile-only {
+    width: 70px;
+  }
 }
-.label-style-seat-price {
-  width: 106px;
+.formbook-label-style-seat-price {
+  width: 145px;
   padding-bottom: 3px;
+  @include mobile-only {
+    width: 106px;
+  }
 }
-.label-18 {
+.formbook-contenair-18 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 10px;
+}
+.formbook-label-18 {
   font-family: "Inria Sans", sans-serif;
-  font-size: 14px;
   color: $color-light;
   border-radius: 2px;
   border: none;
+  font-size: 28px;
+  @include mobile-only {
+    font-size: 20px;
+  }
 }
-.input-check {
+.formbook-input-check {
   font-family: "Inria Sans", sans-serif;
   color: $color-dark;
   background: $color-light;
   box-shadow: 1px 1px 4px #1e1e1e;
   border-radius: 2px;
   border: none;
+  width: 20px;
+  margin-left: 12px;
 }
-.box-total-seat {
+.formbook-box-total-seat {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  flex-direction: column-reverse;
+  @include mobile-only {
+    flex-direction: row;
+  }
 }
-.seat-img-text {
+.formbook-seat-img-text {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  height: 88px;
+  height: 44px;
+  margin: 0px;
+  width: 100%;
+  @include mobile-only {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 88px;
+    width: 80px;
+    margin: 10px;
+  }
 }
 
-.button-book {
-  width: 74px;
-  height: 34px;
+.formbook-button-book {
+  width: 140px;
+  height: 60px;
+  color: $color-light;
   background: $color-Bck-btn;
   box-shadow: 2px 2px 3px $color-shadows-dark;
   border-radius: 4px;
   font-family: $font-content;
-  font-size: 17px;
+  font-size: 34px;
   font-weight: 700;
-  margin: 2% 0% 0% 46%;
   padding: 0;
+  @include mobile-only {
+    width: 90px;
+    height: 46px;
+    font-size: 24px;
+  }
 }
 
-.box-img-navette {
+.formbook-box-img-navette {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 140px;
-  height: 101px;
+  width: 75%;
+  height: 144px;
   background-image: url(https://i.postimg.cc/3Rw6Nkmg/navette.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-origin: content-box;
   background-position: -2px;
+  margin: 4px;
+  @include mobile-only {
+    width: 140px;
+    height: 101px;
+  }
 }
-.first-row {
-  margin-left: 20px;
-  margin-bottom: 16px;
-}
-.second-row,
-.third-row {
+.formbook-first-row {
   margin-left: 2px;
   margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
 }
-.seatA {
+.formbook-second-row,
+.formbook-third-row {
+  margin-left: 2px;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+}
+.formbook-seatA {
   color: #9886b3;
-  font-size: 18px;
+  font-size: 12px;
   font-weight: bold;
-  height: 16px;
   transform: rotate(90deg);
   transform-origin: bottom;
   cursor: context-menu;
+  padding: 0%;
+  margin: -11%;
+  border: none;
 }
-.seatA:hover {
+.formbook-seatA:hover {
   color: #361cf8;
   transform: translateY(-2px);
   transform: rotate(90deg);
   transform-origin: bottom;
+  border: none;
 }
-.seatA:active {
+.formbook-seatA:active {
   color: #1a099a;
   transform: rotate(90deg);
   transform-origin: bottom;
-}
-.seatA:target {
-  color: red;
 }
