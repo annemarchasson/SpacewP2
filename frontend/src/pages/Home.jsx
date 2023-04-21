@@ -3,6 +3,7 @@ import axios from "axios";
 import { NavLink } from "react-router-dom";
 import Card from "../components/Compteurcard/Card";
 import Article from "../components/Articles/Article";
+import "./Home_FlyNews.scss";
 
 function Cards() {
   const [apiData, setData] = useState();
@@ -38,24 +39,31 @@ function Cards() {
           onChange={(e) => setUserInput(e.target.value)}
         />
       </form>
-      {apiData
-        ? apiData
-            .filter((vaiseau) => vaiseau.name.toLowerCase().includes(result))
-            .map((launchSelected) => (
-              <Card key={launchSelected.id} data={launchSelected} />
-            ))
-        : ""}
-
-      {listArticle &&
-        listArticle.map((actu) => (
-          <Article
-            key={actu.title}
-            title={actu.title}
-            link={actu.link}
-            date={actu.date}
-            image={actu.image}
-          />
-        ))}
+      <div className="FlysNews">
+        <div className="FlysHome">
+          {apiData
+            ? apiData
+                .filter((vaiseau) =>
+                  vaiseau.name.toLowerCase().includes(result)
+                )
+                .map((launchSelected) => (
+                  <Card key={launchSelected.id} data={launchSelected} />
+                ))
+            : ""}
+        </div>
+        <div className="ArticlesHome">
+          {listArticle &&
+            listArticle.map((actu) => (
+              <Article
+                key={actu.title}
+                title={actu.title}
+                link={actu.link}
+                date={actu.date}
+                image={actu.image}
+              />
+            ))}
+        </div>
+      </div>
       <NavLink to="Payment-form">Go to Payment</NavLink>
     </>
   );
