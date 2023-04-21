@@ -31,7 +31,7 @@ $breakpoints: (
   box-shadow: 4px 7px 11px $color-shadows-dark;
   border-radius: 10px;
   font-family: $font-content;
-  @include mobile-only{
+  @include mobile-only {
     width: 84%;
     height: 20%;
   }
@@ -52,7 +52,7 @@ $breakpoints: (
   justify-content: space-between;
   align-items: stretch;
   width: 100%;
-  background-color:$color-Bck-div;
+  background-color: $color-Bck-div;
 }
 
 .card-content img {
@@ -67,7 +67,6 @@ $breakpoints: (
   padding: 30px;
   margin-right: auto;
   margin-left: auto;
- 
 }
 .infos-card p {
   padding: 18px;
@@ -110,18 +109,18 @@ $breakpoints: (
 
 .button-go-card:hover {
   background: darken($color-Bck-div, 1.5%);
-  border: 1px solid rgba(#000, .05);
-  box-shadow: 1px 1px 2px rgba(#fff, .2);
-  color: lighten($color-light, 18%); 
+  border: 1px solid rgba(#000, 0.05);
+  box-shadow: 1px 1px 2px rgba(#fff, 0.2);
+  color: lighten($color-light, 18%);
   text-decoration: none;
   text-shadow: -1px -1px 0 darken($color-shadows-dark, 9.5%);
   transition: all 250ms linear;
 }
 .button-maps-card:hover {
   background: darken($color-Bck-div, 1.5%);
-  border: 1px solid rgba(#000, .05);
-  box-shadow: 1px 1px 2px rgba(#fff, .2);
-  color: lighten($color-light, 18%); 
+  border: 1px solid rgba(#000, 0.05);
+  box-shadow: 1px 1px 2px rgba(#fff, 0.2);
+  color: lighten($color-light, 18%);
   text-decoration: none;
   text-shadow: -1px -1px 0 darken($color-shadows-dark, 9.5%);
   transition: all 250ms linear;
