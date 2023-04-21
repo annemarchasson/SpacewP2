@@ -15,13 +15,17 @@ function Card({ data }) {
       <div className="card-content">
         <img src={data.image} alt="" />
         <div className="infos-card">
-          <h1>{data.name}</h1> <br />
+          <h2 className="h2-card">{data.name}</h2> <br />
           <Timer data={data} />
-          {date}
+          <div className="date-card">{date}</div>
           <div className="card-button">
-            <button type="button">GO</button>
+            <button className="button-go-card" type="button">
+              GO
+            </button>
             <a href={data.map_link} target="_blank" rel="noreferrer">
-              <button type="button">Maps</button>
+              <button className="button-maps-card" type="button">
+                MAP
+              </button>
             </a>
           </div>
         </div>

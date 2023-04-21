@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import "@pages/BookingForm/BookingFormScss.scss";
+import "./BookingFormScss.scss";
 
 export default function BookingForm() {
   const [firstname, setFirstname] = useState("");
@@ -53,207 +53,214 @@ export default function BookingForm() {
   };
 
   return (
-    <div className="form-booking">
+    <div className="formbook-booking">
       <form
+        className="formbook"
         onSubmit={(e) => {
           handleSubmit(e);
         }}
       >
-        <div className="contenair-form-identity">
-          <h2>Identity</h2>
-          <div>
-            <input
-              className="input-class"
-              type="text"
-              name="First-Name"
-              placeholder="First-Name"
-              value={firstname}
-              required
-              onChange={(e) => {
-                handleFirstNameChange(e);
-              }}
-            />
-          </div>
-          <div>
-            <input
-              className="input-class"
-              type="text"
-              name="Last-Name"
-              placeholder="Last-Name"
-              value={lastname}
-              required
-              onChange={(e) => {
-                handleLastNameChange(e);
-              }}
-            />
-          </div>
-          <div>
-            <input
-              className="input-class"
-              type="email"
-              name="email"
-              placeholder="Email"
-              value={email}
-              required
-              onChange={(e) => {
-                handleEmailChange(e);
-              }}
-            />
-          </div>
-          <div>
-            <input
-              className="input-class"
-              type="tel"
-              name="phonenumber"
-              placeholder="Phone Number"
-              value={phone}
-              required
-              onChange={(e) => {
-                handlePhoneChange(e);
-              }}
-            />
-          </div>
-        </div>
-        <div className="contenair-form-condition">
-          <h2>Access Requierement</h2>
-          <div>
-            <p className="label-18">I am over 18: </p>
-            <input
-              className="input-check"
-              id="checkbox1"
-              name="checkbox1"
-              type="checkbox"
-              checked={checked}
-              required
-              onChange={(e) => {
-                handleCheckboxChange(e);
-              }}
-            />
-          </div>
-          <select
-            className="option-health"
-            name="health"
-            id="health-select"
-            defaultValue="DEFAULT"
-            required
-            onChange={(evt) => {
-              handleHealthChange(evt);
-            }}
-          >
-            <option className="option-health" value="DEFAULT">
-              --Please choose an option--
-            </option>
-            <option className="option-health" value="nohealth">
-              I have no health concerns
-            </option>
-            <option className="option-health" value="health">
-              I have health concerns
-            </option>
-          </select>
-        </div>
-        <div className="contenair-form-seat">
-          <h2>Seat</h2>
-          <div className="box-total-seat">
-            <div className="seat-img-text">
-              <p className="label-style-seat">Seat n° {seat} </p>
-              <p className="label-style-seat-price">Price 100 000€ </p>
+        <div className="formbook-contenair-total">
+          <div className="contenair-formbook-identity">
+            <h2 className="formbook-h2">Identity</h2>
+            <div>
+              <input
+                className="formbook-input-class"
+                type="text"
+                name="First-Name"
+                placeholder="First-Name"
+                value={firstname}
+                required
+                onChange={(e) => {
+                  handleFirstNameChange(e);
+                }}
+              />
             </div>
-            <div className="box-img-navette">
-              <div className="first-row">
-                <button
-                  type="button"
-                  className="seatA"
-                  id="A1"
-                  onClick={(e) => {
-                    handleSeatChange(e);
-                  }}
-                >
-                  ⬒
-                </button>
-                <button
-                  type="button"
-                  className="seatA"
-                  id="A2"
-                  onClick={(e) => {
-                    handleSeatChange(e);
-                  }}
-                >
-                  ⬒
-                </button>
-              </div>
-              <div className="second-row">
-                <button
-                  type="button"
-                  className="seatA"
-                  id="A3"
-                  onClick={(e) => {
-                    handleSeatChange(e);
-                  }}
-                >
-                  ⬒
-                </button>
-                <button
-                  type="button"
-                  className="seatA"
-                  id="A4"
-                  onClick={(e) => {
-                    handleSeatChange(e);
-                  }}
-                >
-                  ⬒
-                </button>
-              </div>
-              <div className="third-row">
-                <button
-                  type="button"
-                  className="seatA"
-                  id="A5"
-                  onClick={(e) => {
-                    handleSeatChange(e);
-                  }}
-                >
-                  ⬒
-                </button>
-                <button
-                  type="button"
-                  className="seatA"
-                  id="A6"
-                  onClick={(e) => {
-                    handleSeatChange(e);
-                  }}
-                >
-                  ⬒
-                </button>
-                <button
-                  type="button"
-                  className="seatA"
-                  id="A7"
-                  onClick={(e) => {
-                    handleSeatChange(e);
-                  }}
-                >
-                  ⬒
-                </button>
-                <button
-                  type="button"
-                  className="seatA"
-                  id="A8"
-                  onClick={(e) => {
-                    handleSeatChange(e);
-                  }}
-                >
-                  ⬒
-                </button>
-              </div>
+            <div>
+              <input
+                className="formbook-input-class"
+                type="text"
+                name="Last-Name"
+                placeholder="Last-Name"
+                value={lastname}
+                required
+                onChange={(e) => {
+                  handleLastNameChange(e);
+                }}
+              />
+            </div>
+            <div>
+              <input
+                className="formbook-input-class"
+                type="email"
+                name="email"
+                placeholder="Email"
+                value={email}
+                required
+                onChange={(e) => {
+                  handleEmailChange(e);
+                }}
+              />
+            </div>
+            <div>
+              <input
+                className="formbook-input-class"
+                type="tel"
+                name="phonenumber"
+                placeholder="Phone Number"
+                value={phone}
+                required
+                onChange={(e) => {
+                  handlePhoneChange(e);
+                }}
+              />
             </div>
           </div>
+          <div className="contenair-formbook-condition">
+            <h2 className="formbook-h2">Access Requierement</h2>
+            <div className="formbook-contenair-18">
+              <p className="formbook-label-18">I am over 18: </p>
+              <input
+                className="formbook-input-check"
+                id="checkbox1"
+                name="checkbox1"
+                type="checkbox"
+                checked={checked}
+                required
+                onChange={(e) => {
+                  handleCheckboxChange(e);
+                }}
+              />
+            </div>
+            <select
+              className="formbook-option-health"
+              name="health"
+              id="health-select"
+              defaultValue="DEFAULT"
+              required
+              onChange={(evt) => {
+                handleHealthChange(evt);
+              }}
+            >
+              <option className="formbook-option-health2" value="DEFAULT">
+                --Please choose an option--
+              </option>
+              <option className="formbook-option-health2" value="nohealth">
+                I don't have a medical certificate
+              </option>
+              <option className="formbook-option-health2" value="health">
+                I have a medical certificate
+              </option>
+            </select>
+          </div>
+          <div className="contenair-formbook-seat">
+            <h2 className="formbook-h2">Seat</h2>
+            <div className="formbook-box-total-seat">
+              <div className="formbook-seat-img-text">
+                <p className="formbook-label-style-seat">Seat n° {seat} </p>
+                <p className="formbook-label-style-seat-price">
+                  Price 100 000€{" "}
+                </p>
+              </div>
+              <div className="formbook-box-img-navette">
+                <div className="formbook-first-row">
+                  <button
+                    type="button"
+                    className="formbook-seatA"
+                    id="A1"
+                    onClick={(e) => {
+                      handleSeatChange(e);
+                    }}
+                  >
+                    ⬒
+                  </button>
+                  <button
+                    type="button"
+                    className="formbook-seatA"
+                    id="A2"
+                    onClick={(e) => {
+                      handleSeatChange(e);
+                    }}
+                  >
+                    ⬒
+                  </button>
+                </div>
+                <div className="formbook-second-row">
+                  <button
+                    type="button"
+                    className="formbook-seatA"
+                    id="A3"
+                    onClick={(e) => {
+                      handleSeatChange(e);
+                    }}
+                  >
+                    ⬒
+                  </button>
+                  <button
+                    type="button"
+                    className="formbook-seatA"
+                    id="A4"
+                    onClick={(e) => {
+                      handleSeatChange(e);
+                    }}
+                  >
+                    ⬒
+                  </button>
+                </div>
+                <div className="formbook-third-row">
+                  <button
+                    type="button"
+                    className="formbook-seatA"
+                    id="A5"
+                    onClick={(e) => {
+                      handleSeatChange(e);
+                    }}
+                  >
+                    ⬒
+                  </button>
+                  <button
+                    type="button"
+                    className="formbook-seatA"
+                    id="A6"
+                    onClick={(e) => {
+                      handleSeatChange(e);
+                    }}
+                  >
+                    ⬒
+                  </button>
+                  <button
+                    type="button"
+                    className="formbook-seatA"
+                    id="A7"
+                    onClick={(e) => {
+                      handleSeatChange(e);
+                    }}
+                  >
+                    ⬒
+                  </button>
+                  <button
+                    type="button"
+                    className="formbook-seatA"
+                    id="A8"
+                    onClick={(e) => {
+                      handleSeatChange(e);
+                    }}
+                  >
+                    ⬒
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="contenair-form-button">
-          <button type="button" className="button-book">
+
+        <div className="contenair-formbook-button">
+          <button type="button" className="formbook-button-book">
             Book
           </button>
         </div>
       </form>
+
       <NavLink to="/">Retour</NavLink>
     </div>
   );
