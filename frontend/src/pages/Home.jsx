@@ -29,9 +29,9 @@ function Cards() {
 
   return (
     <>
-      <form onSubmit={handleSubmit} className="search">
-        <label htmlFor="search"> Rechercher </label> <br />
-        <input
+      <form className="search-box" onSubmit={handleSubmit}>
+        <label className="search-label" htmlFor="search"> Search </label> <br />
+        <input className="search-input"
           type="text"
           name="search"
           id="search"
