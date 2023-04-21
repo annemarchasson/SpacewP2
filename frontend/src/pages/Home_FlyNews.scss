@@ -1,4 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,700;1,300&family=Saira+Condensed:wght@100;200;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,700;1,300&display=swap");
+
+$font-content: "Inria Sans", sans-serif;
+$color-Bck-div: #141d3c;
+$color-Bck-btn: #4d51aa;
+$color-background: #1e1e1e;
+$color-shadows-dark: #101010;
+$color-light: #d7d7d7;
+$color-dark: #221e40;
 .FlysNews {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+}
+.FlysHome{
+width: 70%;
+}
+.ArticlesHome
+{
+width: 30%;
+}
+.search-box{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+}
+.search-label{
+  margin: 2% 0% 2% 2%;
+  font-family: "Inria Sans", sans-serif;
+  color: #4d51aa;
+  font-size: 20px;
+  font-weight: bold;
+}
+.search-input{
+  margin: 2%;
+  background-color: #d7d7d7;
+  color: $color-dark;
+
 }

@@ -12,7 +12,7 @@ $color-dark: #221e40;
 * {
   margin: 0;
   padding: 0;
-  color: #d7d7d7;
+  color:$color-light;
 }
 
 #root {
@@ -25,35 +25,38 @@ $color-dark: #221e40;
 nav {
   background-image: url("./images/espace.jpg");
   background-position: 40%;
-  height: 300px;
+  height: 144px;
   width: 100%;
 }
 
 .navcontainer1 {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
+  width: 100%;
 }
 
 .navtitle {
-  $breackpoint-max: 390px;
   font-family: "Inria Sans";
   font-style: normal;
   font-weight: 400;
-  font-size: 94px;
+  font-size: 72px;
   line-height: 129.2%;
   display: flex;
   align-items: center;
   text-align: center;
   letter-spacing: -0.11em;
-  color: #ffffff;
-  margin: 20px;
+  color: $color-light;
+  margin: 0px 10px 0px 49px;
 }
 
 .navlogo {
-  width: 150px;
-  height: 150px;
-  margin-right: 350px;
+  width: 115px;
+  height: 115px;
+  -webkit-filter: drop-shadow(5px 5px 5px #666666);
+  filter: drop-shadow(5px 5px 5px black);
+  margin: 13px 0px 0px 30px;
+
 }
 
 .navbar {
@@ -83,31 +86,28 @@ a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 3%;
 }
 
 .navtitle2 {
+  font-family: $font-content;
   font-style: italic;
   font-weight: 700;
-  font-size: 75px;
+  font-size: 26px;
   line-height: 33px;
   display: flex;
   align-items: center;
   text-align: center;
-  letter-spacing: 10px;
-  color: #ffffff;
+  letter-spacing: 15px;
+  color: $color-light;
+  margin-top: 2%;
 }
 
 .navtexte {
-  width: 917px;
-  height: 93px;
-  font-family: "Inria Sans";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 33px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  color: #ffffff;
-  padding: 4.3px;
+ 
+    font-family: $font-content;
+    font-size: 19px;
+    
+    text-align: center;
+  color: $color-light;
 }
