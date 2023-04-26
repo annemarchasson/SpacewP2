@@ -1,11 +1,23 @@
 import PropTypes from "prop-types";
-import React from "react";
+import React, { useState } from "react";
 import "./AboutUs.scss";
 
 function AboutUs({ imageSrc, name, description }) {
-  
+  const [isHovered, setIsHovered] = useState(false);
+
+  function handleMouseEnter() {
+    setIsHovered(true);
+  }
+
+  function handleMouseLeave() {
+    setIsHovered(false);
+  }
   return (
-    <div className="members-container">
+    <div
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      className={isHovered ? "members-containerHovered" : "members-container"}
+    >
       <img src={imageSrc} alt="imageTeam" className="imageMembers" />
 
       <h3 className="nameMembers">{name}</h3>

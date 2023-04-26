@@ -4,15 +4,28 @@
 $font-content: "Inria Sans", sans-serif;
 
 .members-container {
-  border: solid yellow;
+  //border: solid yellow;
   display: flex;
   align-items: center;
   flex-direction: column;
   width: 267px;
   height: 450px;
   margin-top: 85px;
-  margin-left: 15px;
-  margin-right: 15px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+.members-containerHovered {
+  //border: solid yellow;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 267px;
+  height: 450px;
+  margin-top: 85px;
+  margin-left: 40px;
+  margin-right: 40px;
+  transform: scale(1.1);
+  transition: transform 0.4s;
 }
 .imageMembers {
   width: 172px;

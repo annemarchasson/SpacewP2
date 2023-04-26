@@ -8,7 +8,7 @@ function AboutUsPage() {
       imageSrc: "https://i.postimg.cc/R02gGKCs/photo-anne.jpg",
       name: "Anne MARCHASSON",
       description:
-        "Pure northerner, I am the youngest of a large family, so I am nicknamed Titanne. Formerly a graphic designer, I am in conversion to become a front-end web developer. Some passions: conference, cinema, painting, sculpture, Harry Potter. Some collections: socks, wind-up toys and postcards.",
+        "Pure northerner, I am the youngest of a large family, so I am nicknamed Titanne. Formerly a graphic designer, I am in conversion to become a front-end web developer. Some passions: conference, cinema, painting, sculpture, Harry Potter.",
     },
     {
       imageSrc: "https://i.postimg.cc/j5jFkty2/photo-ambre.jpg",
@@ -29,7 +29,7 @@ function AboutUsPage() {
         "After choosing to retrain professionally, I finally found my way. The field of web development fascinates me and motivates me to provide the best of myself.",
     },
     {
-      image: "https://i.postimg.cc/1zdHqkHz/photo-alex.jpg",
+      imageSrc: "https://i.postimg.cc/1zdHqkHz/photo-alex.jpg",
       name: "Alexandre ROUZIERE",
       description:
         "Originally from Bretagne, I'am the understudy of Stephane Plaza, I decided to get out of the shadows and become a full stack web developer. I love soccer and more especially PSG. I also like to go to restaurants and travel as many times as possible.",
