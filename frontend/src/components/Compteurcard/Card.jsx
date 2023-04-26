@@ -19,9 +19,13 @@ function Card({ data }) {
           <Timer data={data} />
           {date}
           <div className="card-button">
-            <button className="button-go-card" type="button">GO</button>
+            <button className="button-go-card" type="button">
+              GO
+            </button>
             <a href={data.map_link} target="_blank" rel="noreferrer">
-              <button className="button-maps-card" type="button">MAP</button>
+              <button className="button-maps-card" type="button">
+                MAP
+              </button>
             </a>
           </div>
         </div>

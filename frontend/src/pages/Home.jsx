@@ -30,8 +30,13 @@ function Cards() {
   return (
     <>
       <form className="search-box" onSubmit={handleSubmit}>
-        <label className="search-label" htmlFor="search"> Search </label> <br />
-        <input className="search-input"
+        <label className="search-label" htmlFor="search">
+          {" "}
+          Search{" "}
+        </label>{" "}
+        <br />
+        <input
+          className="search-input"
           type="text"
           name="search"
           id="search"
