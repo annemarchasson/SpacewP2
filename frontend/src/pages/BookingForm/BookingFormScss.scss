@@ -144,6 +144,7 @@ $breakpoints: (
 }
 .formbook-option-health2 {
   font-size: 15px;
+  color: $color-Bck-div;
 
   @include mobile-only {
     font-size: 10px;
@@ -254,27 +255,28 @@ $breakpoints: (
 }
 .formbook-first-row {
   margin-left: 2px;
-  margin-bottom: 16px;
+  margin-bottom: 23px;
   display: flex;
   flex-direction: column;
 }
 .formbook-second-row,
 .formbook-third-row {
   margin-left: 2px;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
   display: flex;
   flex-direction: column;
 }
 .formbook-seatA {
   color: #9886b3;
-  font-size: 12px;
+  font-size: 21px;
   font-weight: bold;
   transform: rotate(90deg);
   transform-origin: bottom;
   cursor: context-menu;
   padding: 0%;
-  margin: -11%;
+  margin: -3px 1px -1px 1px;
   border: none;
+  background-color:$color-Bck-div;
 }
 .formbook-seatA:hover {
   color: #361cf8;

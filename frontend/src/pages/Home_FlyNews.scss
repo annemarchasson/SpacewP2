@@ -8,34 +8,48 @@ $color-background: #1e1e1e;
 $color-shadows-dark: #101010;
 $color-light: #d7d7d7;
 $color-dark: #221e40;
+
+$breakpoints: (
+  mobile: 600px,
+);
+
+@mixin mobile-only {
+  @media screen and (max-width: map-get($breakpoints, mobile)) {
+    @content;
+  }
+}
+
 .FlysNews {
   //   border: solid red;
   display: flex;
   align-items: flex-start;
 }
-.FlysHome{
-width: 70%;
+.FlysHome {
+  width: 70%;
+  @include mobile-only {
+    width: 100%;
+  }
 }
-.ArticlesHome
-{
-width: 30%;
+.ArticlesHome {
+  width: 30%;
+  @include mobile-only {
+    display:none;
+  }
 }
-.search-box{
+.search-box {
   display: flex;
   flex-direction: row;
   justify-content: center;
-
 }
-.search-label{
+.search-label {
   margin: 2% 0% 2% 2%;
   font-family: "Inria Sans", sans-serif;
   color: #4d51aa;
   font-size: 20px;
   font-weight: bold;
 }
-.search-input{
+.search-input {
   margin: 2%;
   background-color: #d7d7d7;
   color: $color-dark;
-
 }

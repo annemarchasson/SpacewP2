@@ -22,17 +22,18 @@ $breakpoints: (
 
 .card-main {
   display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    color: #d7d7d7;
-    width: 92%;
-    height: 256px;
-    margin: 36px auto;
-    background-color: #1e1e1e;
-    box-shadow: 4px 7px 11px #101010;
-    border-radius: 10px;
-    font-family: "Inria Sans", sans-serif;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #d7d7d7;
+  width: 92%;
+  height: 256px;
+  margin: 36px auto;
+  background-color: #1e1e1e;
+  box-shadow: 4px 7px 11px #101010;
+  border-radius: 10px;
+  font-family: "Inria Sans", sans-serif;
   @include mobile-only {
+    border-radius: 10px;
     width: 84%;
     height: 20%;
   }
@@ -46,6 +47,9 @@ $breakpoints: (
   text-shadow: 6px 5px 5px #101010;
   text-align: center;
   padding-bottom: 0%;
+  @include mobile-only {
+    font-size: 30px;
+  }
 }
 .card-content {
   display: flex;
@@ -54,23 +58,32 @@ $breakpoints: (
   align-items: stretch;
   width: 100%;
   background-color: $color-Bck-div;
+  @include mobile-only {
+    border-radius: 10px;
+  }
 }
 
 .card-content img {
   width: 40%;
   border-radius: 10px 0px 0px 10px;
+  @include mobile-only {
+   width: 42%;
+  }
 }
 
 .infos-card {
   display: flex;
   flex-direction: column;
   align-items: center;
- 
+
   margin-right: auto;
   margin-left: auto;
 }
 .infos-card p {
   padding: 18px;
+  @include mobile-only {
+    padding: 0%;
+  }
 }
 .date-card {
   font-family: $font-content;
@@ -79,10 +92,10 @@ $breakpoints: (
 }
 .card-button {
   padding: 10px;
-  padding: 10px;
   display: flex;
   align-items: center;
   padding-top: 10%;
+
 }
 .button-maps-card {
   width: 100px;
@@ -95,6 +108,12 @@ $breakpoints: (
   font-size: 26px;
   font-weight: bold;
   margin: 2% 12% 2% 2%;
+  @include mobile-only {
+    width: 60px;
+    height: 30px;
+    font-size: 16px;
+  }
+  
 }
 .button-go-card {
   width: 100px;
@@ -107,6 +126,11 @@ $breakpoints: (
   font-size: 26px;
   font-weight: bold;
   margin: 2% 12% 2% 2%;
+  @include mobile-only {
+    width: 60px;
+    height: 30px;
+    font-size: 16px;
+  }
 }
 
 .button-go-card:hover {
