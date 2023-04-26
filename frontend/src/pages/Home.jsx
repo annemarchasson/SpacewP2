@@ -49,7 +49,7 @@ function Cards() {
           {apiData
             ? apiData
                 .filter((vaiseau) =>
-                  vaiseau.name.toLowerCase().includes(result)
+                  vaiseau.destination.toLowerCase().includes(result)
                 )
                 .map((launchSelected) => (
                   <Card key={launchSelected.id} data={launchSelected} />
