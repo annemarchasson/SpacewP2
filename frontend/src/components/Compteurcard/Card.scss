@@ -26,7 +26,7 @@ $breakpoints: (
   justify-content: space-between;
   color: #d7d7d7;
   width: 92%;
-  height: 256px;
+  height: 310px;
   margin: 36px auto;
   background-color: #1e1e1e;
   box-shadow: 4px 7px 11px #101010;
@@ -34,23 +34,26 @@ $breakpoints: (
   font-family: "Inria Sans", sans-serif;
   @include mobile-only {
     border-radius: 10px;
-    width: 84%;
+    width: 90%;
     height: 20%;
   }
 }
 
 .h2-card {
+  margin: 1% 0% 1% 0%;
   font-style: normal;
   font-weight: 700;
-  font-size: 41px;
-  color: #4d51aa;
-  text-shadow: 6px 5px 5px #101010;
+  font-size: 30px;
+  color: $color-Bck-btn;
+  text-shadow: 6px 5px 5px $color-shadows-dark;
   text-align: center;
   padding-bottom: 0%;
+  text-transform: uppercase;
   @include mobile-only {
-    font-size: 30px;
+    font-size: 26px;
   }
 }
+
 .card-content {
   display: flex;
   flex-direction: row;
@@ -58,6 +61,7 @@ $breakpoints: (
   align-items: stretch;
   width: 100%;
   background-color: $color-Bck-div;
+  border-radius: 10px;
   @include mobile-only {
     border-radius: 10px;
   }
@@ -67,7 +71,7 @@ $breakpoints: (
   width: 40%;
   border-radius: 10px 0px 0px 10px;
   @include mobile-only {
-   width: 42%;
+    width: 42%;
   }
 }
 
@@ -75,61 +79,113 @@ $breakpoints: (
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  border-radius: 10px;
   margin-right: auto;
   margin-left: auto;
 }
 .infos-card p {
-  padding: 18px;
+  padding: 0px;
   @include mobile-only {
     padding: 0%;
   }
 }
+.h3-destination-card {
+  font-family: "Inria Sans", sans-serif;
+  color: $color-light;
+  font-size: 25px;
+  letter-spacing: 28px;
+  text-align: center;
+  padding-left: 7%;
+  padding-bottom: 2%;
+  text-transform: uppercase;
+  @include mobile-only {
+    font-size: 20px;
+    letter-spacing: 7px;
+  }
+}
+.text-description-card {
+  text-align: justify;
+  font-family: "Inria Sans", sans-serif;
+  color: $color-light;
+  font-size: 12px;
+  margin: 0% 5% 2% 5%;
+  word-spacing: 1px;
+  line-height: 13px;
+  @include mobile-only {
+    font-size: 10px;
+    margin: 0% 5% 4% 5%;
+    word-spacing: 0px;
+    line-height: 11px;
+    display: block;
+    width: 169px;
+    height: 43px;
+    overflow-y: scroll;
+  }
+}
+
 .date-card {
   font-family: $font-content;
-  font-size: 22px;
-  margin-top: 4%;
+  color: $color-Bck-btn;
+  font-weight: bold;
+  font-size: 19px;
+  text-shadow: 6px 5px 5px $color-shadows-dark;
+  margin-top: 2%;
+  @include mobile-only {
+    font-size: 14px;
+  }
+}
+.h4-price-card {
+  font-family: $font-content;
+  color: $color-light;
+  font-weight: bold;
+  font-size: 14px;
+  margin: 0% 0% 2% 70%;
+  @include mobile-only {
+    font-size: 12px;
+    margin: 1% 0% 1% 52%;
+  }
 }
 .card-button {
   padding: 10px;
   display: flex;
   align-items: center;
-  padding-top: 10%;
-
+  padding-top: 2%;
+  padding-bottom: 0%;
+  width: 100%;
+  justify-content: center;
 }
 .button-maps-card {
-  width: 100px;
-  height: 50px;
-  background: $color-Bck-btn;
-  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.38);
-  border-radius: 6px;
-  color: #d7d7d7;
-  font-family: "Inria Sans", sans-serif;
-  font-size: 26px;
-  font-weight: bold;
-  margin: 2% 12% 2% 2%;
-  @include mobile-only {
-    width: 60px;
-    height: 30px;
-    font-size: 16px;
-  }
-  
-}
-.button-go-card {
-  width: 100px;
-  height: 50px;
+  width: 70px;
+  height: 30px;
   background: #4d51aa;
   box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.38);
   border-radius: 6px;
   color: #d7d7d7;
   font-family: "Inria Sans", sans-serif;
-  font-size: 26px;
+  font-size: 20px;
   font-weight: bold;
-  margin: 2% 12% 2% 2%;
+  margin: 1% 1% 1% 1%;
   @include mobile-only {
-    width: 60px;
-    height: 30px;
-    font-size: 16px;
+    width: 30px;
+    height: 20px;
+    font-size: 12px;
+  }
+}
+.button-go-card {
+  width: 70px;
+  height: 30px;
+  background: #4d51aa;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.38);
+  border-radius: 6px;
+  color: #d7d7d7;
+  font-family: "Inria Sans", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 1% 5% 1% 1%;
+  @include mobile-only {
+    width: 30px;
+    height: 20px;
+    font-size: 12px;
   }
 }
 

@@ -15,12 +15,13 @@ function Card({ data }) {
       <div className="card-content">
         <img src={data.image} alt="" />
         <div className="infos-card">
-          <h2 className="h2-card">{data.name}</h2> <br />
-          <h3>{data.destination}</h3>
-          <p>{data.description}</p>
+          <h2 className="h2-card">{data.name}</h2>
+          <h3 className="h3-destination-card">{data.destination}</h3>
+          <p className="text-description-card">{data.description}</p>
           <Timer data={data} />
-          {date}
-          <h4>{data.price}$</h4>
+
+          <div className="date-card">{date}</div>
+
           <div className="card-button">
             <button className="button-go-card" type="button">
               GO
@@ -31,6 +32,7 @@ function Card({ data }) {
               </button>
             </a>
           </div>
+          <h4 className="h4-price-card">Price: {data.price}$</h4>
         </div>
       </div>
     </div>

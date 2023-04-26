@@ -33,7 +33,7 @@ $breakpoints: (
 .ArticlesHome {
   width: 30%;
   @include mobile-only {
-    display:none;
+    display: none;
   }
 }
 .search-box {

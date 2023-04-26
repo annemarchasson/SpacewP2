@@ -219,16 +219,16 @@ $breakpoints: (
 }
 
 .formbook-button-book {
-  width: 140px;
-  height: 60px;
+  width: 94px;
+  height: 41px;
   color: $color-light;
   background: $color-Bck-btn;
   box-shadow: 2px 2px 3px $color-shadows-dark;
   border-radius: 4px;
-  font-family: $font-content;
-  font-size: 34px;
+  font-family: "Inria Sans", sans-serif;
+  font-size: 23px;
   font-weight: 700;
-  padding: 0;
+  text-transform: uppercase;
   @include mobile-only {
     width: 90px;
     height: 46px;
@@ -236,6 +236,15 @@ $breakpoints: (
   }
 }
 
+.formbook-button-book:hover {
+  background: darken($color-Bck-div, 1.5%);
+  border: 1px solid rgba(#000, 0.05);
+  box-shadow: 1px 1px 2px rgba(#fff, 0.2);
+  color: lighten($color-light, 18%);
+  text-decoration: none;
+  text-shadow: -1px -1px 0 darken($color-shadows-dark, 9.5%);
+  transition: all 250ms linear;
+}
 .formbook-box-img-navette {
   display: flex;
   align-items: center;
@@ -276,7 +285,7 @@ $breakpoints: (
   padding: 0%;
   margin: -3px 1px -1px 1px;
   border: none;
-  background-color:$color-Bck-div;
+  background-color: $color-Bck-div;
 }
 .formbook-seatA:hover {
   color: #361cf8;
