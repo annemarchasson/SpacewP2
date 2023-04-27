@@ -4,38 +4,46 @@
 $font-content: "Inria Sans", sans-serif;
 
 .members-container {
-  //border: solid yellow;
   display: flex;
   align-items: center;
   flex-direction: column;
   width: 267px;
-  height: 450px;
+  height: 486px;
   margin-top: 85px;
   margin-left: 40px;
   margin-right: 40px;
+  box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+  border-radius: 10px;
 }
 .members-containerHovered {
-  //border: solid yellow;
   display: flex;
   align-items: center;
   flex-direction: column;
-  width: 267px;
+  width: 290px;
   height: 450px;
   margin-top: 85px;
   margin-left: 40px;
   margin-right: 40px;
   transform: scale(1.1);
   transition: transform 0.4s;
+  box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+  border-radius: 10px;
 }
 .imageMembers {
   width: 172px;
   height: 172px;
   border-radius: 100px;
+  box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+  border: solid white;
+  margin-top: 10px;
 }
 .nameMembers {
   padding-top: 30px;
+  font-weight: 30px;
 }
 .descriptionMembers {
   padding-top: 20px;
   text-align: center;
+  line-height: 16px;
+  margin:2px;
 }
