@@ -8,6 +8,17 @@ $color-background: #1e1e1e;
 $color-shadows-dark: #101010;
 $color-light: #d7d7d7;
 $color-dark: #221e40;
+
+$breakpoints: (
+  mobile: 600px,
+);
+
+@mixin mobile-only {
+  @media screen and (max-width: map-get($breakpoints, mobile)) {
+    @content;
+  }
+}
+
 .FlysNews {
   //   border: solid red;
   display: flex;
@@ -15,9 +26,15 @@ $color-dark: #221e40;
 }
 .FlysHome {
   width: 70%;
+  @include mobile-only {
+    width: 100%;
+  }
 }
 .ArticlesHome {
   width: 30%;
+  @include mobile-only {
+    display: none;
+  }
 }
 .search-box {
   display: flex;
