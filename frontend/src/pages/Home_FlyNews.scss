@@ -20,12 +20,13 @@ $breakpoints: (
 }
 
 .FlysNews {
-  //   border: solid red;
   display: flex;
   align-items: flex-start;
 }
 .FlysHome {
   width: 70%;
+
+
   @include mobile-only {
     width: 100%;
   }
@@ -35,6 +36,7 @@ $breakpoints: (
   @include mobile-only {
     display: none;
   }
+
 }
 .search-box {
   display: flex;
