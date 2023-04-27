@@ -51,7 +51,6 @@ export default function BookingForm() {
       alert();
     }
   };
-
   return (
     <div className="formbook-booking">
       <form
