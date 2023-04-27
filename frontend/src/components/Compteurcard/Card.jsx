@@ -15,9 +15,13 @@ function Card({ data }) {
       <div className="card-content">
         <img src={data.image} alt="" />
         <div className="infos-card">
-          <h2 className="h2-card">{data.name}</h2> <br />
+          <h2 className="h2-card">{data.name}</h2>
+          <h3 className="h3-destination-card">{data.destination}</h3>
+          <p className="text-description-card">{data.description}</p>
           <Timer data={data} />
-          {date}
+
+          <div className="date-card">{date}</div>
+
           <div className="card-button">
             <button className="button-go-card" type="button">
               GO
@@ -28,6 +32,7 @@ function Card({ data }) {
               </button>
             </a>
           </div>
+          <h4 className="h4-price-card">Price: {data.price}$</h4>
         </div>
       </div>
     </div>
@@ -38,7 +43,10 @@ Card.propTypes = {
   data: PropTypes.shape({
     name: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
+    destination: PropTypes.string.isRequired,
     map_link: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
   }).isRequired,
 };
 
