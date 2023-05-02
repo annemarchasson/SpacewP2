@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,700;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,700;1,300&family=Saira+Condensed:wght@100;200;500&display=swap");
+
+$font-content: "Inria Sans", sans-serif;
+
+.members-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 267px;
+  height: 486px;
+  margin-top: 85px;
+  margin-left: 40px;
+  margin-right: 40px;
+  box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+  border-radius: 10px;
+}
+.members-containerHovered {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 290px;
+  height: 450px;
+  margin-top: 85px;
+  margin-left: 40px;
+  margin-right: 40px;
+  transform: scale(1.1);
+  transition: transform 0.4s;
+  box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+  border-radius: 10px;
+}
+.imageMembers {
+  width: 172px;
+  height: 172px;
+  border-radius: 100px;
+  box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+  border: solid white;
+  margin-top: 10px;
+}
+.nameMembers {
+  padding-top: 30px;
+  font-weight: 30px;
+}
+.descriptionMembers {
+  padding-top: 20px;
+  text-align: center;
+  line-height: 16px;
+  margin: 2px;
+}

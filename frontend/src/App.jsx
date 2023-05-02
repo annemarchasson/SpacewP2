@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Payment from "@pages/PaymentForm/Payment";
 import { useState, useEffect } from "react";
+import AboutUsPage from "@pages/AboutUs/AboutUsPage";
 import NavBar from "./components/NavBar/NavBar/NavBar";
 import NavBarMobile from "./components/NavBar/NavBarMobile/NavBarMobile";
 import BookingForm from "./pages/BookingForm/BookingForm";
@@ -35,6 +36,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/Booking-form" element={<BookingForm />} />
         <Route path="/Payment-form" element={<Payment />} />
+        <Route path="/About-us" element={<AboutUsPage />} />
       </Routes>
     </>
   );

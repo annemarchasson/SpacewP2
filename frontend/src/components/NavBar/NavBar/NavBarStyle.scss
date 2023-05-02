@@ -9,6 +9,16 @@ $color-shadows-dark: #101010;
 $color-light: #d7d7d7;
 $color-dark: #221e40;
 
+$breakpoints: (
+  mobile: 600px,
+);
+
+@mixin mobile-only {
+  @media screen and (max-width: map-get($breakpoints, mobile)) {
+    @content;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -27,6 +37,9 @@ nav {
   background-position: 40%;
   height: 144px;
   width: 100%;
+  @include mobile-only {
+    display: none;
+  }
 }
 
 .navcontainer1 {
