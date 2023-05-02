@@ -5,8 +5,10 @@ import { useState, useEffect } from "react";
 import AboutUsPage from "@pages/AboutUs/AboutUsPage";
 import NavBar from "./components/NavBar/NavBar/NavBar";
 import NavBarMobile from "./components/NavBar/NavBarMobile/NavBarMobile";
+import { useState } from "react";
 import BookingForm from "./pages/BookingForm/BookingForm";
 import Home from "./pages/Home";
+import ConfirmationPage from "./pages/ConfirmationPage";
 
 function App() {
   function getCurrentDimension() {
@@ -29,14 +31,22 @@ function App() {
     };
   }, [screenSize]);
 
+  const [message, setMessage] = useState("");
   return (
     <>
       {screenSize.width < 600 ? <NavBarMobile /> : <NavBar />}
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Booking-form" element={<BookingForm />} />
+        <Route
+          path="/Booking-form/:id"
+          element={<BookingForm message={message} setMessage={setMessage} />}
+        />
         <Route path="/Payment-form" element={<Payment />} />
         <Route path="/About-us" element={<AboutUsPage />} />
+        <Route
+          path="/ConfirmationPage/:id"
+          element={<ConfirmationPage daronne={message} />}
+        />
       </Routes>
     </>
   );
