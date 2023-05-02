@@ -30,10 +30,7 @@ function NavBar() {
           </div>
         </div>
         <div className="navcontainer2">
-          <div>
-       
-          </div>
-        
+          <div />
         </div>
       </nav>
     </div>
