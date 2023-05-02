@@ -5,7 +5,6 @@ import { useState, useEffect } from "react";
 import AboutUsPage from "@pages/AboutUs/AboutUsPage";
 import NavBar from "./components/NavBar/NavBar/NavBar";
 import NavBarMobile from "./components/NavBar/NavBarMobile/NavBarMobile";
-import { useState } from "react";
 import BookingForm from "./pages/BookingForm/BookingForm";
 import Home from "./pages/Home";
 import ConfirmationPage from "./pages/ConfirmationPage";
