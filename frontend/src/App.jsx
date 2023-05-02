@@ -30,7 +30,7 @@ function App() {
 
   return (
     <>
-    {screenSize.width<600 ?  <NavBarMobile/> : <NavBar/>}
+      {screenSize.width < 600 ? <NavBarMobile /> : <NavBar />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Booking-form" element={<BookingForm />} />

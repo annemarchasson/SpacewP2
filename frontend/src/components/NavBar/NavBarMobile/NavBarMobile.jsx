@@ -1,25 +1,32 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./NavBarMobile.scss";
-import {FaNewspaper, FaHome, FaAddressBook, FaUsers} from "react-icons/fa";
+import { FaNewspaper, FaHome, FaAddressBook, FaUsers } from "react-icons/fa";
 
 function NavBarMobile() {
   return (
-    <div >
+    <div>
       <nav>
         <div className="navbarmobile">
-        <div>
-          <Link to="/" className="logohome"><FaHome/></Link>
-        </div>
-        <div>
-          <Link to="/Booking-form" className="logobooking"><FaAddressBook/></Link>
-        </div>
-        <div>
-          <Link to="/ArticlesMobilePage" className="logonews"><FaNewspaper/></Link>
-        </div>
-        <div>
-          <Link to="/About-us" className="logoabout"><FaUsers/></Link>
-        </div>
+          <div>
+            <Link to="/" className="logohome">
+              <FaHome />
+            </Link>
+          </div>
+          <div>
+            <Link to="/Booking-form" className="logobooking">
+              <FaAddressBook />
+            </Link>
+          </div>
+          <div>
+            <Link to="/ArticlesMobilePage" className="logonews">
+              <FaNewspaper />
+            </Link>
+          </div>
+          <div>
+            <Link to="/About-us" className="logoabout">
+              <FaUsers />
+            </Link>
+          </div>
         </div>
       </nav>
     </div>
