@@ -3,10 +3,14 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import "./PageConfirmationStyle.scss";
 import PropTypes from "prop-types";
+import dayjs from "dayjs";
+import localizedFormat from "dayjs/plugin/localizedFormat";
 
-function ConfirmationPage({ daronne }) {
+function ConfirmationPage({ identity }) {
   const [data, setData] = useState("");
 
+  dayjs.extend(localizedFormat);
+  const date = dayjs().format("LLLL");
   const { id } = useParams();
   useEffect(() => {
     axios
@@ -25,14 +29,14 @@ function ConfirmationPage({ daronne }) {
           <div className="list-qr-code">
             <ul>
               <li className="list-qr-code-flight">{data.name}</li>
-              <li className="list-qr-code-date">{data.departure_at}</li>
+              <li className="list-qr-code-date">{date}</li>
               <li className="list-qr-code-description">{data.destination}</li>
               <li className="list-qr-code-name">
-                {daronne.firstname} {daronne.lastname}
+                {identity.firstname} {identity.lastname}
               </li>
               <li>
-                <p>{daronne.email}</p>
-                <p>{daronne.phone}</p>
+                <p>{identity.email}</p>
+                <p>{identity.phone}</p>
               </li>
             </ul>
           </div>
@@ -55,7 +59,7 @@ function ConfirmationPage({ daronne }) {
           <h2 className="flight-ticket">{data.name}</h2>
           <div className="date-destination-text">
             <h3 className="destination-purchase-ticket">{data.destination}</h3>
-            <h4 className="date-purchase-ticket">{data.departure_at}</h4>
+            <h4 className="date-purchase-ticket">{date}</h4>
           </div>
           <h2 className="purchase-counter">YOUR FLIGHT IN 03 : 25 : 45 : 51</h2>
         </div>
@@ -66,7 +70,7 @@ function ConfirmationPage({ daronne }) {
             width="200"
           />
           <h4 className="seats-description">
-            {daronne.seat}
+            {identity.seat}
             <br />
             {data.price}
           </h4>
@@ -88,7 +92,7 @@ function ConfirmationPage({ daronne }) {
 }
 
 ConfirmationPage.propTypes = {
-  daronne: PropTypes.shape({
+  identity: PropTypes.shape({
     firstname: PropTypes.string.isRequired,
     lastname: PropTypes.string.isRequired,
     email: PropTypes.string.isRequired,

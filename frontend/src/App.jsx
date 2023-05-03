@@ -48,7 +48,7 @@ function App() {
         <Route path="/AboutUsPageMobile" element={<AboutUsPageMobile />} />
         <Route
           path="/ConfirmationPage/:id"
-          element={<ConfirmationPage daronne={message} />}
+          element={<ConfirmationPage identity={message} />}
         />
       </Routes>
     </>

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "./NavBarMobile.scss";
-import { FaNewspaper, FaHome, FaAddressBook, FaUsers } from "react-icons/fa";
+import { FaNewspaper, FaHome, FaUsers } from "react-icons/fa";
 
 function NavBarMobile() {
   return (
@@ -10,11 +10,6 @@ function NavBarMobile() {
           <div>
             <Link to="/" className="logohome">
               <FaHome />
-            </Link>
-          </div>
-          <div>
-            <Link to="/Booking-form" className="logobooking">
-              <FaAddressBook />
             </Link>
           </div>
           <div>

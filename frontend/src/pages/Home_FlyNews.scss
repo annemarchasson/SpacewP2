@@ -39,7 +39,9 @@ $breakpoints: (
 .search-box {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  margin: 1% 0% -2% 1%;
 }
 .search-label {
   margin: 2% 0% 2% 2%;

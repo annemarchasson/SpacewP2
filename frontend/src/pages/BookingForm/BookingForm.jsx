@@ -67,7 +67,7 @@ export default function BookingForm({ setMessage }) {
       <form className="formbook" onSubmit={handleSubmit}>
         <div className="formbook-contenair-total">
           <div className="contenair-formbook-identity">
-            <h2 className="formbook-h2">Identity</h2>
+            <h2 className="formbook-h2">Identity:</h2>
             <div>
               <input
                 className="formbook-input-class"
@@ -251,5 +251,5 @@ export default function BookingForm({ setMessage }) {
 }
 
 BookingForm.propTypes = {
-  setMessage: PropTypes.func({}).isRequired,
+  setMessage: PropTypes.string.isRequired,
 };

@@ -20,13 +20,7 @@ function NavBar() {
                 <Link to="/">Home</Link>
               </li>
               <li>
-                <Link to="/Booking-form">Booking</Link>
-              </li>
-              <li>
                 <Link to="/About-us">About Us</Link>
-              </li>
-              <li>
-                <Link to="/ConfirmationPage">Confirmation Booking</Link>
               </li>
             </ul>
             <h2 className="navtitle2">Ticket Sale - Space Travel</h2>

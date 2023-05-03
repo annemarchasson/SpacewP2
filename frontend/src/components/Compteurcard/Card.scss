@@ -164,7 +164,8 @@ $breakpoints: (
   font-family: "Inria Sans", sans-serif;
   font-size: 20px;
   font-weight: bold;
-  margin: 1% 1% 1% 1%;
+  margin: 1% 5% 1% 1%;
+  text-align: center;
   @include mobile-only {
     width: 30px;
     height: 20px;
@@ -182,6 +183,7 @@ $breakpoints: (
   font-size: 20px;
   font-weight: bold;
   margin: 1% 5% 1% 1%;
+  text-align: center;
   @include mobile-only {
     width: 30px;
     height: 20px;
