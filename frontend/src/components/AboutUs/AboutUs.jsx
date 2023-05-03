@@ -39,7 +39,7 @@ AboutUs.propTypes = {
   imageSrc: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  linkedin:PropTypes.string.isRequired
+  linkedin: PropTypes.string.isRequired,
 };
 
 export default AboutUs;
