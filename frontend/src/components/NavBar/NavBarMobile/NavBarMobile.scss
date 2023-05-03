@@ -1,6 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,700;1,300&family=Saira+Condensed:wght@100;200;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,700;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,700;1,300&family=Saira+Condensed:wght@100;200;500&display=swap");
 
+$font-title: "Saira Condensed", sans-serif;
 $font-content: "Inria Sans", sans-serif;
 $color-Bck-div: #141d3c;
 $color-Bck-btn: #4d51aa;
@@ -23,6 +24,7 @@ $breakpoints: (
   margin: 0;
   padding: 0;
   color: $color-light;
+  box-sizing: border-box;
 }
 
 #root {
@@ -38,7 +40,11 @@ nav {
   height: 144px;
   width: 100%;
   @include mobile-only {
-    display: none;
+    position: fixed;
+    width: 100%;
+    height: 5em;
+    display: flex;
+    justify-content: flex-end;
   }
 }
 
@@ -90,9 +96,6 @@ a {
   color: #d7d7d7;
   text-decoration: none;
 }
-a:hover {
-  color: #4d51aa;
-}
 
 .navcontainer2 {
   display: flex;
@@ -118,7 +121,36 @@ a:hover {
 .navtexte {
   font-family: $font-content;
   font-size: 19px;
-
   text-align: center;
   color: $color-light;
+}
+
+.navbarmobile {
+  @include mobile-only {
+    background-color: #141d3c;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 60px;
+    align-items: center;
+    margin-left: 30%;
+  }
+}
+
+.logohome {
+  font-size: 40px;
+}
+
+.logobooking {
+  font-size: 40px;
+}
+
+.logonews {
+  font-size: 40px;
+}
+
+.logoabout {
+  font-size: 40px;
 }

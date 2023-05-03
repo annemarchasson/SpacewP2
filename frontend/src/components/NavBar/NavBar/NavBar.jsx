@@ -25,6 +25,9 @@ function NavBar() {
               <li>
                 <Link to="/About-us">About Us</Link>
               </li>
+              <li>
+                <Link to="/ConfirmationPage">Confirmation Booking</Link>
+              </li>
             </ul>
             <h2 className="navtitle2">Ticket Sale - Space Travel</h2>
           </div>

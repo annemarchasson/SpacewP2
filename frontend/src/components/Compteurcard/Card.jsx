@@ -1,9 +1,9 @@
-import React from "react";
 import dayjs from "dayjs";
 import Timer from "@components/Timer/Timer";
 import "./Card.scss";
 import localizedFormat from "dayjs/plugin/localizedFormat";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 function Card({ data }) {
   dayjs.extend(localizedFormat);
@@ -23,9 +23,11 @@ function Card({ data }) {
           <div className="date-card">{date}</div>
 
           <div className="card-button">
-            <button className="button-go-card" type="button">
-              GO
-            </button>
+            <Link className="button-go-card" to={`/Booking-form/${data.id}`}>
+              {" "}
+              GO{" "}
+            </Link>
+
             <a href={data.map_link} target="_blank" rel="noreferrer">
               <button className="button-maps-card" type="button">
                 MAP
@@ -41,6 +43,7 @@ function Card({ data }) {
 
 Card.propTypes = {
   data: PropTypes.shape({
+    id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
     destination: PropTypes.string.isRequired,
