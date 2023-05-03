@@ -68,7 +68,6 @@ function Cards() {
             ))}
         </div>
       </div>
-
     </>
   );
 }
