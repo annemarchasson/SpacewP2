@@ -45,7 +45,7 @@ nav {
 .navcontainer1 {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 100%;
 }
 
@@ -74,10 +74,11 @@ nav {
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: end !important;
 }
 
 .navbar li {
+  padding: 3% 2% 0% 6% !important;
   list-style: none;
   padding: 0 60px;
   position: relative;
@@ -85,7 +86,9 @@ nav {
   font-family: "Inria Sans";
   color: #d7d7d7;
 }
-
+.navbardeskstop {
+  width: 80%;
+}
 a {
   color: #d7d7d7;
   text-decoration: none;

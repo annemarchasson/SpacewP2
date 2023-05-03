@@ -1,8 +1,13 @@
 import React from "react";
 import "./Article.scss";
 import PropTypes from "prop-types";
+import dayjs from "dayjs";
+import localizedFormat from "dayjs/plugin/localizedFormat";
 
-function Article({ title, link, date, image }) {
+function Article({ title, link, image }) {
+  dayjs.extend(localizedFormat);
+  const date = dayjs().format("LLLL");
+
   return (
     <div className="actu-container">
       <a
@@ -22,7 +27,6 @@ function Article({ title, link, date, image }) {
 Article.propTypes = {
   title: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
-  date: PropTypes.number.isRequired,
   image: PropTypes.string.isRequired,
 };
 

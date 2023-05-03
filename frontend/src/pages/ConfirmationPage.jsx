@@ -3,10 +3,14 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import "./PageConfirmationStyle.scss";
 import PropTypes from "prop-types";
+import dayjs from "dayjs";
+import localizedFormat from "dayjs/plugin/localizedFormat";
 
 function ConfirmationPage({ identity }) {
   const [data, setData] = useState("");
 
+  dayjs.extend(localizedFormat);
+  const date = dayjs().format("LLLL");
   const { id } = useParams();
   useEffect(() => {
     axios
@@ -25,7 +29,7 @@ function ConfirmationPage({ identity }) {
           <div className="list-qr-code">
             <ul>
               <li className="list-qr-code-flight">{data.name}</li>
-              <li className="list-qr-code-date">{data.departure_at}</li>
+              <li className="list-qr-code-date">{date}</li>
               <li className="list-qr-code-description">{data.destination}</li>
               <li className="list-qr-code-name">
                 {identity.firstname} {identity.lastname}
@@ -55,7 +59,7 @@ function ConfirmationPage({ identity }) {
           <h2 className="flight-ticket">{data.name}</h2>
           <div className="date-destination-text">
             <h3 className="destination-purchase-ticket">{data.destination}</h3>
-            <h4 className="date-purchase-ticket">{data.departure_at}</h4>
+            <h4 className="date-purchase-ticket">{date}</h4>
           </div>
           <h2 className="purchase-counter">YOUR FLIGHT IN 03 : 25 : 45 : 51</h2>
         </div>
