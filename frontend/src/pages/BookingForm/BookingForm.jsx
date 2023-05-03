@@ -1,64 +1,70 @@
-import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { useNavigate, NavLink, useParams } from "react-router-dom";
 import "./BookingFormScss.scss";
+import axios from "axios";
+import PropTypes from "prop-types";
 
-export default function BookingForm() {
-  const [firstname, setFirstname] = useState("");
-  const [lastname, setLastname] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [checked, setChecked] = React.useState(false);
-  const [health, setHealth] = useState("");
-  const [seat, setSeat] = useState("--");
-  // state seat
+export default function BookingForm({ setMessage }) {
+  const [data, setData] = useState("");
+  const navigate = useNavigate();
+  const { id } = useParams();
+
+  useEffect(() => {
+    axios
+      .get(`http://localhost:5000/fly/${id}`)
+      .then((result) => setData(result.data));
+  }, []);
+
+  const [bookingFormInfo, setBookingFormInfo] = useState({
+    firstname: "",
+    lastname: "",
+    email: "",
+    phone: "",
+    seat: "",
+  });
+
+  const handleChangeBooking = (e) => {
+    const input = e.target;
+    setBookingFormInfo({ ...bookingFormInfo, [input.name]: input.value });
+  };
+
+  // seat
   const handleSeatChange = (e) => {
-    setSeat(e.target.id);
+    const input = e.target;
+    setBookingFormInfo({ ...bookingFormInfo, [input.name]: input.id });
   };
 
-  // state firstname with
-  const handleFirstNameChange = (e) => {
-    setFirstname(e.target.value);
-  };
-  // state of Lastname
-  const handleLastNameChange = (e) => {
-    setLastname(e.target.value);
-  };
-  // state email
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
-  };
-  // state phone
-  const handlePhoneChange = (e) => {
-    setPhone(e.target.value);
-  };
+  // checked
+  const [checked, setChecked] = React.useState(false);
+
   // state Checkbox
   const handleCheckboxChange = () => {
     setChecked(!checked);
   };
+  // health
+  const [health, setHealth] = useState("");
   // state Health
   const handleHealthChange = (e) => {
     setHealth(e.target.value);
   };
+
   // submit
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!checked || health !== "nohealth") {
+    if (!checked || health !== "health") {
       // condition si age et santé pas ok
       alert(
         "Make an appointment with your doctor to obtain a medical certificate."
       );
     } else {
-      alert();
+      setMessage(bookingFormInfo);
+      navigate(`/ConfirmationPage/${data.id}`);
     }
   };
+
   return (
     <div className="formbook-booking">
-      <form
-        className="formbook"
-        onSubmit={(e) => {
-          handleSubmit(e);
-        }}
-      >
+      <form className="formbook" onSubmit={handleSubmit}>
         <div className="formbook-contenair-total">
           <div className="contenair-formbook-identity">
             <h2 className="formbook-h2">Identity</h2>
@@ -66,52 +72,46 @@ export default function BookingForm() {
               <input
                 className="formbook-input-class"
                 type="text"
-                name="First-Name"
+                name="firstname"
                 placeholder="First-Name"
-                value={firstname}
-                required
-                onChange={(e) => {
-                  handleFirstNameChange(e);
-                }}
+                value={bookingFormInfo.firstname}
+                onChange={handleChangeBooking}
               />
             </div>
+
             <div>
               <input
                 className="formbook-input-class"
                 type="text"
-                name="Last-Name"
+                name="lastname"
                 placeholder="Last-Name"
-                value={lastname}
+                value={bookingFormInfo.lastname}
                 required
-                onChange={(e) => {
-                  handleLastNameChange(e);
-                }}
+                onChange={handleChangeBooking}
               />
             </div>
+
             <div>
               <input
                 className="formbook-input-class"
                 type="email"
                 name="email"
                 placeholder="Email"
-                value={email}
+                value={bookingFormInfo.email}
                 required
-                onChange={(e) => {
-                  handleEmailChange(e);
-                }}
+                onChange={handleChangeBooking}
               />
             </div>
+
             <div>
               <input
                 className="formbook-input-class"
                 type="tel"
-                name="phonenumber"
+                name="phone"
                 placeholder="Phone Number"
-                value={phone}
+                value={bookingFormInfo.phone}
                 required
-                onChange={(e) => {
-                  handlePhoneChange(e);
-                }}
+                onChange={handleChangeBooking}
               />
             </div>
           </div>
@@ -121,14 +121,12 @@ export default function BookingForm() {
               <p className="formbook-label-18">I am over 18: </p>
               <input
                 className="formbook-input-check"
+                type="checkbox"
                 id="checkbox1"
                 name="checkbox1"
-                type="checkbox"
-                checked={checked}
+                checked={bookingFormInfo.checked}
                 required
-                onChange={(e) => {
-                  handleCheckboxChange(e);
-                }}
+                onChange={handleCheckboxChange}
               />
             </div>
             <select
@@ -156,20 +154,22 @@ export default function BookingForm() {
             <h2 className="formbook-h2">Seat</h2>
             <div className="formbook-box-total-seat">
               <div className="formbook-seat-img-text">
-                <p className="formbook-label-style-seat">Seat n° {seat} </p>
+                <p className="formbook-label-style-seat">
+                  Seat n° {bookingFormInfo.seat}
+                </p>
                 <p className="formbook-label-style-seat-price">
-                  Price 100 000€{" "}
+                  Price: {data.price} $
                 </p>
               </div>
+
               <div className="formbook-box-img-navette">
                 <div className="formbook-first-row">
                   <button
                     type="button"
                     className="formbook-seatA"
                     id="A1"
-                    onClick={(e) => {
-                      handleSeatChange(e);
-                    }}
+                    name="seat"
+                    onClick={handleSeatChange}
                   >
                     ⬒
                   </button>
@@ -177,21 +177,20 @@ export default function BookingForm() {
                     type="button"
                     className="formbook-seatA"
                     id="A2"
-                    onClick={(e) => {
-                      handleSeatChange(e);
-                    }}
+                    name="seat"
+                    onClick={handleSeatChange}
                   >
                     ⬒
                   </button>
                 </div>
+
                 <div className="formbook-second-row">
                   <button
                     type="button"
                     className="formbook-seatA"
                     id="A3"
-                    onClick={(e) => {
-                      handleSeatChange(e);
-                    }}
+                    name="seat"
+                    onClick={handleSeatChange}
                   >
                     ⬒
                   </button>
@@ -199,21 +198,20 @@ export default function BookingForm() {
                     type="button"
                     className="formbook-seatA"
                     id="A4"
-                    onClick={(e) => {
-                      handleSeatChange(e);
-                    }}
+                    name="seat"
+                    onClick={handleSeatChange}
                   >
                     ⬒
                   </button>
                 </div>
+
                 <div className="formbook-third-row">
                   <button
                     type="button"
                     className="formbook-seatA"
                     id="A5"
-                    onClick={(e) => {
-                      handleSeatChange(e);
-                    }}
+                    name="seat"
+                    onClick={handleSeatChange}
                   >
                     ⬒
                   </button>
@@ -221,9 +219,8 @@ export default function BookingForm() {
                     type="button"
                     className="formbook-seatA"
                     id="A6"
-                    onClick={(e) => {
-                      handleSeatChange(e);
-                    }}
+                    name="seat"
+                    onClick={handleSeatChange}
                   >
                     ⬒
                   </button>
@@ -231,19 +228,8 @@ export default function BookingForm() {
                     type="button"
                     className="formbook-seatA"
                     id="A7"
-                    onClick={(e) => {
-                      handleSeatChange(e);
-                    }}
-                  >
-                    ⬒
-                  </button>
-                  <button
-                    type="button"
-                    className="formbook-seatA"
-                    id="A8"
-                    onClick={(e) => {
-                      handleSeatChange(e);
-                    }}
+                    name="seat"
+                    onClick={handleSeatChange}
                   >
                     ⬒
                   </button>
@@ -252,9 +238,8 @@ export default function BookingForm() {
             </div>
           </div>
         </div>
-
         <div className="contenair-formbook-button">
-          <button type="button" className="formbook-button-book">
+          <button className="formbook-button-book" type="submit">
             Book
           </button>
         </div>
@@ -264,3 +249,7 @@ export default function BookingForm() {
     </div>
   );
 }
+
+BookingForm.propTypes = {
+  setMessage: PropTypes.func({}).isRequired,
+};

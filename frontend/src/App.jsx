@@ -1,5 +1,4 @@
 import { Routes, Route } from "react-router-dom";
-import "./App.css";
 import Payment from "@pages/PaymentForm/Payment";
 import { useState, useEffect } from "react";
 import AboutUsPage from "@pages/AboutUs/AboutUsPage";
@@ -7,8 +6,11 @@ import NavBar from "./components/NavBar/NavBar/NavBar";
 import NavBarMobile from "./components/NavBar/NavBarMobile/NavBarMobile";
 import BookingForm from "./pages/BookingForm/BookingForm";
 import Home from "./pages/Home";
+import ConfirmationPage from "./pages/ConfirmationPage";
+import "./App.css";
 
 function App() {
+  const [message, setMessage] = useState("");
   function getCurrentDimension() {
     return {
       width: window.innerWidth,
@@ -34,9 +36,16 @@ function App() {
       {screenSize.width < 600 ? <NavBarMobile /> : <NavBar />}
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Booking-form" element={<BookingForm />} />
+        <Route
+          path="/Booking-form/:id"
+          element={<BookingForm message={message} setMessage={setMessage} />}
+        />
         <Route path="/Payment-form" element={<Payment />} />
         <Route path="/About-us" element={<AboutUsPage />} />
+        <Route
+          path="/ConfirmationPage/:id"
+          element={<ConfirmationPage daronne={message} />}
+        />
       </Routes>
     </>
   );
