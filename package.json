@@ -31,5 +31,8 @@
     "husky": "^8.0.3",
     "node-sass": "^8.0.0",
     "sass": "^1.62.0"
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.1"
   }
 }
