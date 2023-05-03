@@ -1,18 +1,39 @@
 import { Routes, Route } from "react-router-dom";
-import "./App.css";
 import Payment from "@pages/PaymentForm/Payment";
+import { useState, useEffect } from "react";
 import AboutUsPage from "@pages/AboutUs/AboutUsPage";
-import { useState } from "react";
+import NavBar from "./components/NavBar/NavBar/NavBar";
+import NavBarMobile from "./components/NavBar/NavBarMobile/NavBarMobile";
 import BookingForm from "./pages/BookingForm/BookingForm";
-import NavBar from "./components/NavBar/NavBar";
 import Home from "./pages/Home";
 import ConfirmationPage from "./pages/ConfirmationPage";
+import "./App.css";
 
 function App() {
   const [message, setMessage] = useState("");
+  function getCurrentDimension() {
+    return {
+      width: window.innerWidth,
+      height: window.innerHeight,
+    };
+  }
+
+  const [screenSize, setScreenSize] = useState(getCurrentDimension());
+
+  useEffect(() => {
+    const updateDimension = () => {
+      setScreenSize(getCurrentDimension());
+    };
+    window.addEventListener("resize", updateDimension);
+
+    return () => {
+      window.removeEventListener("resize", updateDimension);
+    };
+  }, [screenSize]);
+
   return (
     <>
-      <NavBar />
+      {screenSize.width < 600 ? <NavBarMobile /> : <NavBar />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route
