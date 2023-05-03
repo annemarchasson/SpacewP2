@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import "./PageConfirmationStyle.scss";
 import PropTypes from "prop-types";
 
-function ConfirmationPage({ daronne }) {
+function ConfirmationPage({ identity }) {
   const [data, setData] = useState("");
 
   const { id } = useParams();
@@ -28,11 +28,11 @@ function ConfirmationPage({ daronne }) {
               <li className="list-qr-code-date">{data.departure_at}</li>
               <li className="list-qr-code-description">{data.destination}</li>
               <li className="list-qr-code-name">
-                {daronne.firstname} {daronne.lastname}
+                {identity.firstname} {identity.lastname}
               </li>
               <li>
-                <p>{daronne.email}</p>
-                <p>{daronne.phone}</p>
+                <p>{identity.email}</p>
+                <p>{identity.phone}</p>
               </li>
             </ul>
           </div>
@@ -66,7 +66,7 @@ function ConfirmationPage({ daronne }) {
             width="200"
           />
           <h4 className="seats-description">
-            {daronne.seat}
+            {identity.seat}
             <br />
             {data.price}
           </h4>
@@ -88,7 +88,7 @@ function ConfirmationPage({ daronne }) {
 }
 
 ConfirmationPage.propTypes = {
-  daronne: PropTypes.shape({
+  identity: PropTypes.shape({
     firstname: PropTypes.string.isRequired,
     lastname: PropTypes.string.isRequired,
     email: PropTypes.string.isRequired,
