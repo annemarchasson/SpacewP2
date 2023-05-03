@@ -70,6 +70,8 @@ function Cards() {
         </div>
       </div>
       <NavLink to="Payment-form">Go to Payment</NavLink>
+      <NavLink to="ArticlesMobilePage">ArticlesPageMobile</NavLink>
+      <NavLink to="AboutUsPageMobile">AboutUsPageMobile</NavLink>
     </>
   );
 }
