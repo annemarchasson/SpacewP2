@@ -1,7 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,700;1,300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,700;1,300&family=Saira+Condensed:wght@100;200;500&display=swap");
 
+$font-title: "Saira Condensed", sans-serif;
 $font-content: "Inria Sans", sans-serif;
+$color-Bck-div: #141d3c;
+$color-Bck-btn: #4d51aa;
+$color-background: #1e1e1e;
+$color-shadows-dark: #101010;
+$color-light: #d7d7d7;
+$color-dark: #221e40;
+$breakpoints: (
+  mobile: 600px,
+);
+@mixin mobile-only {
+  @media screen and (max-width: map-get($breakpoints, mobile)) {
+    @content;
+  }
+}
 
 .members-container {
   display: flex;
@@ -45,5 +60,10 @@ $font-content: "Inria Sans", sans-serif;
   padding-top: 20px;
   text-align: center;
   line-height: 16px;
-  margin:2px;
+  margin: 2px;
+}
+.linkedinMembers {
+  margin-top: 10px;
+  width: 20px;
+  height: 20px;
 }
