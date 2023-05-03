@@ -33,6 +33,6 @@
     "sass": "^1.62.0"
   },
   "dependencies": {
-    "nodemailer": "^6.9.1"
+    "prop-types": "^15.8.1"
   }
 }

@@ -1,6 +1,4 @@
 import axios from "axios";
-import { NavLink } from "react-router-dom";
-import { useEffect, useState } from "react";
 import Card from "../components/Compteurcard/Card";
 import Article from "../components/Articles/Article";
 import "./Home_FlyNews.scss";
@@ -68,7 +66,6 @@ function Cards() {
             ))}
         </div>
       </div>
-      <NavLink to="Payment-form">Go to Payment</NavLink>
     </>
   );
 }

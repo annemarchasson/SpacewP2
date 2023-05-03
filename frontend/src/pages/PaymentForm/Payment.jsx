@@ -31,72 +31,62 @@ function Payment() {
         >
           <div className="content-first-payment">
             <div className="billing">
-              <h2>Billing address</h2>
+              <h2 className="h2-payment">Billing address</h2>
               <input type="hidden" name="form-name" value="contact" />
-              <label htmlFor="FullName">
-                Full Name <br />
-                <input
-                  type="text"
-                  name="FullName"
-                  id="FullName"
-                  placeholder="Full Name"
-                />
+              <label className="label-payment" htmlFor="FullName">
+                Full Name
               </label>
+              <input
+                type="text"
+                name="FullName"
+                id="FullName"
+                placeholder="Full Name"
+              />
 
-              <label htmlFor="Email">
+              <label className="label-payment" htmlFor="Email">
                 Email
-                <br />
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  placeholder="email"
-                />
               </label>
+              <input type="email" name="email" id="email" placeholder="email" />
 
-              <label htmlFor="Address">
-                Address <br />
-                <input
-                  type="text"
-                  name="Address"
-                  id="Address"
-                  placeholder="Address"
-                />
+              <label className="label-payment" htmlFor="Address">
+                Address
               </label>
+              <input
+                type="text"
+                name="Address"
+                id="Address"
+                placeholder="Address"
+              />
 
-              <label htmlFor="City">
-                City <br />
-                <input
-                  type="text"
-                  name="City"
-                  id="Address"
-                  placeholder="City"
-                />
+              <label className="label-payment" htmlFor="City">
+                City
               </label>
+              <input type="text" name="City" id="Address" placeholder="City" />
+
               <div className="zip">
                 <div className="content-zip">
-                  <label htmlFor="Zip">
-                    Zip <br />
-                    <input type="text" name="Zip" id="Zip" placeholder="Zip" />
+                  <label className="label-payment" htmlFor="Zip">
+                    Zip
                   </label>
+                  <input type="text" name="Zip" id="Zip" placeholder="Zip" />
                 </div>
                 <div className="content-zip">
-                  <label htmlFor="State">
-                    State <br />
-                    <input
-                      type="text"
-                      name="State"
-                      id="State"
-                      placeholder="City"
-                    />
+                  <label className="label-payment" htmlFor="State">
+                    State
                   </label>
+                  <input
+                    type="text"
+                    name="State"
+                    id="State"
+                    placeholder="City"
+                  />
                 </div>
               </div>
             </div>
 
             <div className="payment">
-              <h2>Payment</h2>
-              <p>Accept Card</p>
+              <h2 className="h2-payment">Payment</h2>
+              <p className="label-accept">Accept Card</p>
               <div className="icon-container">
                 <ul>
                   <li>
@@ -113,21 +103,27 @@ function Payment() {
                   </li>
                 </ul>
               </div>
-              <label htmlFor="cname">Name on Card</label>
+              <label className="label-payment" htmlFor="cname">
+                Name on Card
+              </label>
               <input
                 type="text"
                 id="cname"
                 name="cardname"
                 placeholder="John More Doe"
               />
-              <label htmlFor="ccnum">Credit card number</label>
+              <label className="label-payment" htmlFor="ccnum">
+                Credit card number
+              </label>
               <input
                 type="text"
                 id="ccnum"
                 name="cardnumber"
                 placeholder="1111-2222-3333-4444"
               />
-              <label htmlFor="expmonth">Exp Month</label>
+              <label className="label-payment" htmlFor="expmonth">
+                Exp Month
+              </label>
               <input
                 type="text"
                 id="expmonth"
@@ -136,7 +132,9 @@ function Payment() {
               />
               <div className="cvv">
                 <div className="exp">
-                  <label htmlFor="expyear">Exp Year</label> <br />
+                  <label className="label-payment" htmlFor="expyear">
+                    Exp Year
+                  </label>
                   <input
                     type="text"
                     id="expyear"
@@ -145,7 +143,9 @@ function Payment() {
                   />
                 </div>
                 <div className="csv">
-                  <label htmlFor="cvv">CVV</label> <br />
+                  <label className="label-payment" htmlFor="cvv">
+                    CVV
+                  </label>
                   <input type="text" id="cvv" name="cvv" placeholder="352" />
                 </div>
               </div>
