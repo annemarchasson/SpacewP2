@@ -41,6 +41,7 @@ nav {
   background-position-y: 10%;
   @include mobile-only {
     display: none;
+    background-image: none;
   }
 }
 

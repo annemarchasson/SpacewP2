@@ -8,7 +8,13 @@ $breakpoints: (
 }
 
 .footer {
-  display: block;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  width: 100%;
+  background-color: #221e40;
+  align-items: center;
+  justify-content: space-between;
   @include mobile-only {
     display: none;
   }
@@ -17,6 +23,8 @@ $breakpoints: (
 .footer2 {
   display: flex;
   align-items: center;
+  justify-content: space-around;
+  margin: 0% 0% 0% 2%;
 }
 
 .footer3 {
@@ -25,8 +33,6 @@ $breakpoints: (
   font-size: 30px;
 }
 
-.footer4 {
-  list-style: none;
-  display: flex;
-  margin-left: 450px;
+.copyright {
+  margin: 0% 2% 0% 0%;
 }
