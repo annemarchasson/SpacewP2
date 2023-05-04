@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "./NavBarMobile.scss";
-import { FaNewspaper, FaHome, FaUsers, FaBriefcase} from "react-icons/fa";
+import { FaNewspaper, FaHome, FaUsers, FaBriefcase } from "react-icons/fa";
 
 function NavBarMobile() {
   return (
@@ -19,7 +19,7 @@ function NavBarMobile() {
           </div>
           <div>
             <Link to="/ConfirmationPage/1" className="logoabout">
-              <FaBriefcase/>
+              <FaBriefcase />
             </Link>
           </div>
           <div>

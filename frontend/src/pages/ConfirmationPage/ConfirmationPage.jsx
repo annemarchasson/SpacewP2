@@ -65,7 +65,7 @@ function ConfirmationPage({ identity }) {
               <h4 className="date-purchase-ticket">{date}</h4>
             </div>
             <h2 className="purchase-counter">
-            <Timer key={data.id} data={data} />
+              <Timer key={data.id} data={data} />
             </h2>
           </div>
           <div className="container-seats-plan-ticket">
