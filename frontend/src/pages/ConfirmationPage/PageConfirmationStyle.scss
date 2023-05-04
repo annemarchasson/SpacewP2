@@ -9,13 +9,49 @@ $color-background: #1e1e1e;
 $color-shadows-dark: #101010;
 $color-light: #d7d7d7;
 $color-dark: #221e40;
+
+$breakpoints: (
+  mobile: 600px,
+);
+
+@mixin mobile-only {
+  @media screen and (max-width: map-get($breakpoints, mobile)) {
+    @content;
+  }
+}
+
+@keyframes myAnimTicket {
+  0% {
+    opacity: 0;
+    transform: translateY(250px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ticket {
+  animation: myAnimTicket 1s ease 0s 1 normal forwards;
+  width: 82%;
+  margin: 2% auto 2% auto;
+}
 /* ----  title thank for purchase ---- */
+.confir-ticket {
+  width: 94%;
+  margin: 0% auto 0% auto;
+}
 .purchase-title {
   color: $color-light;
   text-align: center;
-  font-size: 80px;
+  font-size: 60px;
   font-family: $font-title;
-  letter-spacing: 5px;
+  letter-spacing: 10px;
+  @include mobile-only {
+    font-size: 20px;
+    margin: 5% 0% 4% 0%;
+  }
 }
 /* ----  boarding pass ---- */
 .boarding-pass {
@@ -30,7 +66,12 @@ $color-dark: #221e40;
   font-size: 25px;
   letter-spacing: 5px;
   border-bottom-left-radius: 20px;
+  @include mobile-only {
+    font-size: 18px;
+    border-radius: none;
+  }
 }
+
 /* ----  ticket purchase ---- */
 .bloc-ticket {
   width: 100%;
@@ -39,32 +80,52 @@ $color-dark: #221e40;
   color: $color-light;
   background-color: $color-Bck-div;
   box-shadow: $color-shadows-dark 0px 7px 8px 0px;
-
   overflow: hidden;
   border-top-right-radius: 0%;
+  @include mobile-only {
+    flex-direction: column-reverse;
+    align-items: center;
+    width: 100%;
+  }
 }
 /* ----  ticket central description ---- */
-.flight-ticket,
-.destination-purchase-ticket,
-.date-purchase-ticket,
-.purchase-counter {
+.flight-ticket {
   text-align: center;
   font-family: $font-content;
-  letter-spacing: 3px;
-}
-.flight-ticket {
   color: $color-Bck-btn;
-  font-size: 30px;
+  font-size: 48px;
+  text-transform: uppercase;
+  text-shadow: 3px 3px 3px $color-shadows-dark;
+  @include mobile-only {
+    font-size: 30px;
+  }
+}
+.destination-purchase-ticket {
+  letter-spacing: 5px;
+  font-size: 52px;
+  text-align: center;
+  font-family: "Inria Sans", sans-serif;
+  @include mobile-only {
+    font-size: 30px;
+  }
+}
+.date-purchase-ticket {
+  font-size: 20px;
+  text-align: center;
+  font-weight: normal;
+  letter-spacing: 2px;
+  font-family: $font-content;
 }
 .ticket-text {
   display: flex;
   flex-direction: column;
   margin: auto;
+  align-items: center;
 }
 .date-destination-text {
   display: flex;
   flex-direction: column;
-  padding: 50px;
+  padding: 0% 0% 10% 0%;
   font-size: 22px;
 }
 /* ----  LEFT LOGO & QR CODE ---- */
@@ -73,6 +134,7 @@ $color-dark: #221e40;
 }
 
 .list-qr-code {
+  width: 100%;
   display: flex;
   text-align: center;
   justify-content: space-around;
@@ -81,43 +143,85 @@ $color-dark: #221e40;
   padding-bottom: 10%;
   margin-left: 6%;
   font-family: $font-content;
+  color: black;
+  text-align: center;
+  list-style: none;
+  @include mobile-only {
+    margin: 0%;
+    padding: 5% 0% 0% 0%;
+  }
 }
 .list-qr-code-flight,
 .list-qr-code-date,
 .list-qr-code-description,
-.list-qr-code-name {
-  color: black;
+.list-qr-code-name,
+.list-qr-code-phone,
+.list-qr-code-email {
+  color: $color-Bck-div;
   text-align: center;
   list-style: none;
+  font-size: 18px;
+  letter-spacing: -1px;
+  font-style: italic;
+  font-weight: bold;
+}
+.list-qr-code-name {
+  margin-top: 6%;
 }
 .container-qr-code {
+  width: 250px;
   background-color: #d7d7d7;
-  padding-left: 3%;
-  padding-right: 3%;
+  padding-left: 1%;
+  padding-right: 2%;
   border-right: 0.1em dashed;
   border-top: 0.1em dashed;
   border-color: black;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  align-content: flex-start;
+  align-items: center;
+  box-shadow: inset -28px 32px 20px -30px $color-Bck-div;
+  @include mobile-only {
+    width: 400px;
+  }
 }
 .qr-code-logo {
   display: flex;
+  width: 150px;
+  box-shadow: 1px 1px 4px $color-Bck-div;
+  margin: 0%;
+  @include mobile-only {
+    width: 100px;
+    margin: 8% 0% 18% 0%;
+  }
 }
 .scissors {
+  display: block;
   margin-left: 120%;
+  width: 32px;
+  filter: drop-shadow(2px 2px 0px $color-Bck-btn);
+  margin: 0% 0% 0% 127%;
+  @include mobile-only {
+    display: none;
+  }
 }
 /* ----  COUNTER ---- */
 .purchase-counter {
+  text-align: center;
+  font-family: $font-content;
   letter-spacing: 3px;
   font-weight: lighter;
   color: $color-light;
   font-size: 25px;
+  width: 100%;
+  margin-bottom: 0%;
   background-color: #4d51aa3d;
   box-shadow: $color-shadows-dark 0px 3px 4px 0px;
+  @include mobile-only {
+    font-size: 18px;
+    letter-spacing: 2px;
+    width: 180px;
+    margin-bottom: 6%;
+  }
 }
 /* ----  ticket right seats plan ---- */
 .container-seats-plan-ticket {
@@ -129,10 +233,21 @@ $color-dark: #221e40;
   align-items: center;
   align-content: flex-end;
 }
+.container-seats-plan-ticket img {
+  width: 170px;
+  margin: 6% 4% 0% 0%;
+  @include mobile-only {
+    width: 100px;
+  }
+}
 .seats-description {
   text-align: center;
   padding-top: 20px;
   font-size: 22px;
+}
+.confirm-price {
+  font-size: 20px;
+  font-family: $font-content;
 }
 /* ----  youtube video ---- */
 .container-video-page-confirmation {

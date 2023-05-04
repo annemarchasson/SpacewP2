@@ -8,8 +8,8 @@ import Home from "@pages/Home";
 import { useState, useEffect } from "react";
 import NavBar from "./components/NavBar/NavBar/NavBar";
 import NavBarMobile from "./components/NavBar/NavBarMobile/NavBarMobile";
-import ConfirmationPage from "./pages/ConfirmationPage";
 import Footer from "./components/Footer/Footer";
+import ConfirmationPage from "./pages/ConfirmationPage/ConfirmationPage";
 import "./App.css";
 
 function App() {
