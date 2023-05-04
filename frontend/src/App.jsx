@@ -14,13 +14,13 @@ import "./App.css";
 
 function App() {
   const [message, setMessage] = useState("");
+
   function getCurrentDimension() {
     return {
       width: window.innerWidth,
       height: window.innerHeight,
     };
   }
-
   const [screenSize, setScreenSize] = useState(getCurrentDimension());
 
   useEffect(() => {

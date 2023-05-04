@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import axios from "axios";
 import "./Payment.scss";
+
 import {
   FaCcVisa,
   FaCcApplePay,
@@ -9,6 +11,15 @@ import {
 } from "react-icons/fa";
 
 function Payment() {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    useEffect(() => {
+      axios.post("/sendmail");
+    }, []);
+
+    e.preventDefault();
+  };
+
   return (
     <>
       <div className="main-form">
@@ -141,7 +152,9 @@ function Payment() {
             </div>
           </div>
           <div className="btn-payment">
-            <button type="submit">Confirm</button>
+            <button type="submit" onSubmit={() => handleSubmit()}>
+              Confirm
+            </button>
           </div>
         </form>
       </div>

@@ -9,7 +9,6 @@ function Timer({ data }) {
     const now = new Date().getTime();
     const countdownDate = new Date(data.departure_at).getTime();
     const distanceBase = countdownDate - now;
-
     const days = Math.floor(distanceBase / (1000 * 60 * 60 * 24));
     const hours = Math.floor(
       (distanceBase % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
