@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import "./PageConfirmationStyle.scss";
+import "./ConfirmationPage/ConfirmationPage";
 import PropTypes from "prop-types";
 import dayjs from "dayjs";
 import localizedFormat from "dayjs/plugin/localizedFormat";

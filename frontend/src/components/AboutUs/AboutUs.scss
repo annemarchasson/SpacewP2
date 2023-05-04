@@ -18,6 +18,15 @@ $breakpoints: (
   }
 }
 
+.test2 {
+  display: flex;
+  flex-direction: row;
+  @include mobile-only {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 .members-container {
   display: flex;
   align-items: center;
@@ -30,6 +39,7 @@ $breakpoints: (
   box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
   border-radius: 10px;
 }
+
 .members-containerHovered {
   display: flex;
   align-items: center;
