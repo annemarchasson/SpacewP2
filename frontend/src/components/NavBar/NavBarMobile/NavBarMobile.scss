@@ -35,10 +35,12 @@ $breakpoints: (
 }
 
 nav {
-  background-image: url("./images/espace.jpg");
-  background-position: 40%;
+  background-image: url("../images/fond.png");
   height: 144px;
   width: 100%;
+  background-size: 122%;
+  background-repeat: no-repeat;
+  background-position-y: 10%;
   @include mobile-only {
     position: fixed;
     width: 100%;

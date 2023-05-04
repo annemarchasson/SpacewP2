@@ -31,7 +31,7 @@ function Cards() {
       <form className="search-box" onSubmit={handleSubmit}>
         <label className="search-label" htmlFor="search">
           {" "}
-          Search{" "}
+          →{" "}
         </label>{" "}
         <br />
         <input
@@ -39,6 +39,7 @@ function Cards() {
           type="text"
           name="search"
           id="search"
+          placeholder="Search..."
           value={userInput}
           onChange={(e) => setUserInput(e.target.value)}
         />
