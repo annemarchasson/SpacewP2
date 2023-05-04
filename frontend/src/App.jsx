@@ -8,7 +8,8 @@ import Home from "@pages/Home";
 import { useState, useEffect } from "react";
 import NavBar from "./components/NavBar/NavBar/NavBar";
 import NavBarMobile from "./components/NavBar/NavBarMobile/NavBarMobile";
-import ConfirmationPage from "./pages/ConfirmationPage";
+import Footer from "./components/Footer/Footer";
+import ConfirmationPage from "./pages/ConfirmationPage/ConfirmationPage";
 import "./App.css";
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
   return (
     <>
       {screenSize.width < 600 ? <NavBarMobile /> : <NavBar />}
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route
@@ -51,6 +53,7 @@ function App() {
           element={<ConfirmationPage identity={message} />}
         />
       </Routes>
+      <Footer />
     </>
   );
 }

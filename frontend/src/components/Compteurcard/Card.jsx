@@ -34,7 +34,7 @@ function Card({ data }) {
               </button>
             </a>
           </div>
-          <h4 className="h4-price-card">Price: {data.price}$</h4>
+          <h4 className="h4-price-card">Price: {data.price} Ke</h4>
         </div>
       </div>
     </div>
