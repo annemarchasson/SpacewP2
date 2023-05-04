@@ -4,14 +4,30 @@
 $font-content: "Inria Sans", sans-serif;
 $font-size: #d7d7d7;
 
+$breakpoints: (
+  mobile: 600px,
+);
+
+@mixin mobile-only {
+  @media screen and (max-width: map-get($breakpoints, mobile)) {
+    @content;
+  }
+}
+
 body {
   background-color: #1e1e1e;
+}
+.ArticlesMobilePage {
+  padding-bottom: 14%;
 }
 .actu-container {
   margin: 12% 10% 32% 10%;
   color: #d7d7d7;
   display: flex;
   place-content: center;
+  @include mobile-only {
+    margin: 10% 10% 10% 10%;
+  }
 }
 .imageArticle {
   border-radius: 6%;

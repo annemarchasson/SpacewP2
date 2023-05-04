@@ -31,6 +31,10 @@ $breakpoints: (
 .FlysNews {
   display: flex;
   align-items: flex-start;
+  padding-bottom: 0%;
+  @include mobile-only {
+    padding-bottom: 10%;
+  }
 }
 .FlysHome {
   width: 70%;
@@ -55,6 +59,9 @@ $breakpoints: (
   background-color: $color-Bck-btn;
   border-radius: 0.7rem;
   margin-left: 30px;
+  @include mobile-only {
+    margin: 6% auto 0% auto;
+  }
 }
 .search-label {
   color: $color-Bck-div;

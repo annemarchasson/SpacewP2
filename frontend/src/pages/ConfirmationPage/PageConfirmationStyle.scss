@@ -269,3 +269,99 @@ $breakpoints: (
   transform: scale(1.05); /* Ajoute zoom sur image */
   animation: opac 1s;
 }
+/* ----  youtube video & form ---- */
+.container-video-page-confirmation-form {
+  display: flex;
+  align-items: flex-end;
+  letter-spacing: 3px;
+  font-family: $font-title;
+  color: #d7d7d7;
+  width: 82%;
+  margin: 1% auto 2% auto;
+  @include mobile-only {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.box-fly-video-title {
+  font-family: $font-content;
+  font-size: 20px;
+  text-align: center;
+  background: $color-Bck-div;
+  width: 44%;
+  height: 30%;
+  padding-bottom: 2%;
+  border-radius: 15px;
+  @include mobile-only {
+    width: 100%;
+  }
+}
+.title-fly {
+  padding-bottom: 10%;
+  padding-top: 3%;
+  font-size: 25px;
+}
+.video-fly {
+  width: 285px;
+  height: 270px;
+  border-radius: 15px;
+  @include mobile-only {
+    width: 244px;
+    height: 200px;
+  }
+}
+/* ----  more form ---- */
+.container-form-ticket {
+  border-radius: 15px;
+  padding-top: 2%;
+  padding-right: 7%;
+  padding-left: 7%;
+  text-align: center;
+  color: #d7d7d7;
+  font-size: 25px;
+  background-color: #141d3c;
+  margin-left: 10%;
+  @include mobile-only {
+    margin: 6% 0% 5% 0%;
+    padding: 5% 0% 22% 0%;
+  }
+}
+.input-form {
+  border-radius: 13px;
+  height: 50px;
+  border: 3px solid $color-Bck-btn;
+  padding: 25px;
+  font-size: 20px;
+  font-family: $font-content;
+  display: flex;
+  flex-direction: column;
+}
+.input-form-button[type="button"] {
+  cursor: pointer;
+  transition: 0.4s;
+  margin: 6% auto 8% auto;
+  padding: 13px;
+  color: $color-light;
+  background: $color-Bck-btn;
+  box-shadow: 2px 2px 3px $color-shadows-dark;
+  border-radius: 4px;
+  font-family: "Inria Sans", sans-serif;
+  font-size: 23px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.input-form-button[type="button"]:hover {
+  background: darken($color-Bck-div, 1.5%);
+  border: 1px solid rgba(#000, 0.05);
+  box-shadow: 1px 1px 2px rgba(#fff, 0.2);
+  color: lighten($color-light, 18%);
+  text-decoration: none;
+  text-shadow: -1px -1px 0 darken($color-shadows-dark, 9.5%);
+  transition: all 250ms linear;
+}
+
+.container-form-ticket label {
+  font-family: $font-content;
+  font-size: 22px;
+}

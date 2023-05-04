@@ -24,6 +24,7 @@ $breakpoints: (
   @include mobile-only {
     flex-direction: column;
     align-items: center;
+    padding-bottom: 70px;
   }
 }
 
@@ -33,11 +34,12 @@ $breakpoints: (
   flex-direction: column;
   width: 267px;
   height: 486px;
-  margin-top: 85px;
-  margin-left: 40px;
-  margin-right: 40px;
+  margin: 2% 1% 2% 1%;
   box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
   border-radius: 10px;
+  @include mobile-only {
+    height: 355px;
+  }
 }
 
 .members-containerHovered {
@@ -55,22 +57,26 @@ $breakpoints: (
   border-radius: 10px;
 }
 .imageMembers {
-  width: 172px;
-  height: 172px;
+  width: 120px;
+  height: 120px;
   border-radius: 100px;
   box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
   border: solid white;
   margin-top: 10px;
 }
 .nameMembers {
+  font-family: $font-title;
   padding-top: 30px;
   font-weight: 30px;
+  text-align: center;
 }
 .descriptionMembers {
+  font-family: $font-content;
   padding-top: 20px;
   text-align: center;
   line-height: 16px;
   margin: 2px;
+  font-size: 12px;
 }
 .linkedinMembers {
   margin-top: 10px;

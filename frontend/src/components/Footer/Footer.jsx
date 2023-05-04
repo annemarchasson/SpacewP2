@@ -41,8 +41,8 @@ function Footer() {
               <FaTwitterSquare />
             </a>
           </li>
-          <li className="footer4">Wild Code School 2023</li>
         </ul>
+        <div className="copyright"> © Wild Code School 2023</div>
       </div>
     </div>
   );

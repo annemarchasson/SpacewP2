@@ -18,7 +18,11 @@ function ConfirmationPage({ identity }) {
       .get(`http://localhost:5000/fly/${id}`)
       .then((resulte) => setData(resulte.data));
   }, []);
-
+  const handleClick = () => {
+    alert(
+      `We have received your message, we will not fail to get back to you quickly in order to provide you with an answer.`
+    );
+  };
   return (
     <div className="confir-ticket">
       <h2 className="purchase-title">THANK FOR YOUR PURCHASE !</h2>
@@ -79,14 +83,61 @@ function ConfirmationPage({ identity }) {
         </div>
       </div>
 
-      <div className="container-video-page-confirmation">
-        <h2 className="title-video-page-confirmation">Watch last flight</h2>
-        <pre className="youtube-video-page-confirmation">
+      <div className="container-video-page-confirmation-form">
+        <pre className="box-fly-video-title">
+          <h2 className="title-fly">Watch last flight</h2>
           <iframe
+            className="video-fly"
             src="https://www.youtube.com/embed/dYg3V-qfdOI"
             title="Last Flight"
           />
         </pre>
+        <div className="container-form-ticket">
+          <form>
+            <div>
+              <label htmlFor="Firstname">Firstname:</label>
+              <input
+                className="input-form"
+                type="text"
+                id="firstname"
+                placeholder=""
+              />
+            </div>
+            <div>
+              <label htmlFor="Lastname">Lastname:</label>
+              <input
+                className="input-form"
+                type="text"
+                id="lastname"
+                placeholder=""
+              />
+            </div>
+            <div>
+              <label htmlFor="e-mail">E-mail:</label>
+              <input
+                className="input-form"
+                type="text"
+                id="e-mail"
+                placeholder=""
+              />
+            </div>
+            <div>
+              <label htmlFor="Message">Message:</label>
+              <input
+                className="input-form"
+                type="text"
+                id="message"
+                placeholder=""
+              />
+            </div>
+            <input
+              className="input-form-button"
+              type="button"
+              value="Contact us"
+              onClick={handleClick}
+            />
+          </form>
+        </div>
       </div>
     </div>
   );
