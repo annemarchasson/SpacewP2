@@ -5,10 +5,10 @@ import "./PageConfirmationStyle.scss";
 import PropTypes from "prop-types";
 import dayjs from "dayjs";
 import localizedFormat from "dayjs/plugin/localizedFormat";
+import Timer from "@components/Timer/Timer";
 
 function ConfirmationPage({ identity }) {
   const [data, setData] = useState("");
-
   dayjs.extend(localizedFormat);
   const date = dayjs().format("LLLL");
   const { id } = useParams();
@@ -61,7 +61,9 @@ function ConfirmationPage({ identity }) {
             <h3 className="destination-purchase-ticket">{data.destination}</h3>
             <h4 className="date-purchase-ticket">{date}</h4>
           </div>
-          <h2 className="purchase-counter">YOUR FLIGHT IN 03 : 25 : 45 : 51</h2>
+          <h2 className="purchase-counter">
+            <Timer key={data.id} data={data} />
+          </h2>
         </div>
         <div className="container-seats-plan-ticket">
           <img
