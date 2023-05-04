@@ -30,7 +30,6 @@ $breakpoints: (
   height: 120%;
   display: flex;
   align-items: center;
-  place-content: center;
   @include mobile-only {
     height: 100%;
   }
@@ -41,7 +40,7 @@ $breakpoints: (
   width: 100%;
   justify-content: space-around;
   align-items: self-start;
-  padding-top: 10%;
+  padding-top: 6%;
   @include mobile-only {
     flex-direction: column;
     padding-top: 0%;

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate, NavLink, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import "./BookingFormScss.scss";
 import axios from "axios";
 import PropTypes from "prop-types";
@@ -158,7 +158,7 @@ export default function BookingForm({ setMessage }) {
                   Seat n° {bookingFormInfo.seat}
                 </p>
                 <p className="formbook-label-style-seat-price">
-                  Price: {data.price} $
+                  Price: {data.price} Ke
                 </p>
               </div>
 
@@ -244,8 +244,6 @@ export default function BookingForm({ setMessage }) {
           </button>
         </div>
       </form>
-
-      <NavLink to="/">Retour</NavLink>
     </div>
   );
 }
