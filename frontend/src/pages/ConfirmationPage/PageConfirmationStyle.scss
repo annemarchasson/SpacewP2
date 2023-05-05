@@ -252,6 +252,7 @@ $breakpoints: (
 /* ----  youtube video ---- */
 .container-video-page-confirmation {
   margin-left: 50px;
+  justify-content: center;
   margin-top: 5%;
   width: 50%;
   text-align: center;
@@ -272,7 +273,6 @@ $breakpoints: (
 /* ----  youtube video & form ---- */
 .container-video-page-confirmation-form {
   display: flex;
-  align-items: flex-end;
   letter-spacing: 3px;
   font-family: $font-title;
   color: #d7d7d7;
@@ -289,22 +289,22 @@ $breakpoints: (
   font-size: 20px;
   text-align: center;
   background: $color-Bck-div;
-  width: 44%;
-  height: 30%;
+  width: 60%;
   padding-bottom: 2%;
   border-radius: 15px;
+  padding-top: 20px;
   @include mobile-only {
     width: 100%;
   }
 }
 .title-fly {
-  padding-bottom: 10%;
-  padding-top: 3%;
+  padding-bottom: 18%;
+  padding-top: 5%;
   font-size: 25px;
 }
 .video-fly {
-  width: 285px;
-  height: 270px;
+  width: 360px;
+  height: 260px;
   border-radius: 15px;
   @include mobile-only {
     width: 244px;
@@ -321,21 +321,25 @@ $breakpoints: (
   color: #d7d7d7;
   font-size: 25px;
   background-color: #141d3c;
-  margin-left: 10%;
+  margin-left: 2%;
   @include mobile-only {
     margin: 6% 0% 5% 0%;
     padding: 5% 0% 22% 0%;
+    width: 100%;
+    text-align: -webkit-center;
   }
 }
 .input-form {
   border-radius: 13px;
-  height: 50px;
+  height: 20px;
   border: 3px solid $color-Bck-btn;
-  padding: 25px;
+  padding: 19px;
   font-size: 20px;
   font-family: $font-content;
   display: flex;
   flex-direction: column;
+  color: $color-Bck-div;
+  margin-top: 2%;
 }
 .input-form-button[type="button"] {
   cursor: pointer;
@@ -364,4 +368,6 @@ $breakpoints: (
 .container-form-ticket label {
   font-family: $font-content;
   font-size: 22px;
+  margin-bottom: 9%;
+  padding-bottom: 7%;
 }

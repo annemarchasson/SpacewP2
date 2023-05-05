@@ -24,8 +24,9 @@ function Card({ data }) {
 
           <div className="card-button">
             <Link className="button-go-card" to={`/Booking-form/${data.id}`}>
-              {" "}
-              GO{" "}
+              <button className="button-maps-card" type="button">
+                GO
+              </button>
             </Link>
 
             <a href={data.map_link} target="_blank" rel="noreferrer">

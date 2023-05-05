@@ -10,7 +10,7 @@ import NavBar from "./components/NavBar/NavBar/NavBar";
 import NavBarMobile from "./components/NavBar/NavBarMobile/NavBarMobile";
 import Footer from "./components/Footer/Footer";
 import ConfirmationPage from "./pages/ConfirmationPage/ConfirmationPage";
-import "./App.css";
+import "./App.scss";
 
 function App() {
   const [message, setMessage] = useState("");
@@ -36,6 +36,13 @@ function App() {
 
   return (
     <>
+      <div className="top-mobile">
+        <img
+          className="logo-picture-top"
+          src="/src/images/logonav.png"
+          alt="Logo Space W"
+        />
+      </div>
       {screenSize.width < 600 ? <NavBarMobile /> : <NavBar />}
 
       <Routes>

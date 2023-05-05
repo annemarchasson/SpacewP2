@@ -37,8 +37,9 @@ $breakpoints: (
   margin: 2% 1% 2% 1%;
   box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
   border-radius: 10px;
+  gap: 10px;
   @include mobile-only {
-    height: 355px;
+    height: 374px;
   }
 }
 
@@ -48,7 +49,7 @@ $breakpoints: (
   flex-direction: column;
   width: 290px;
   height: 450px;
-  margin-top: 85px;
+  gap: 10px;
   margin-left: 40px;
   margin-right: 40px;
   transform: scale(1.1);
