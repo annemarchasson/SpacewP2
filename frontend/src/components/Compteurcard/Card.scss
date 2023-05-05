@@ -140,10 +140,10 @@ $breakpoints: (
   color: $color-light;
   font-weight: bold;
   font-size: 14px;
-  margin: 0% 0% 2% 70%;
+  margin: 0% 0% 3% 70%;
   @include mobile-only {
     font-size: 12px;
-    margin: 1% 0% 1% 52%;
+    margin: 1% 0% 3% 52%;
   }
 }
 .card-button {
@@ -167,6 +167,7 @@ $breakpoints: (
   font-weight: bold;
   margin: 1% 5% 1% 1%;
   text-align: center;
+  border: none;
   @include mobile-only {
     width: 30px;
     height: 20px;
