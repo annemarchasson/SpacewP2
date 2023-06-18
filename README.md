@@ -30,25 +30,34 @@ ESLint et Prettier: ESLint et Prettier sont des outils utilisés pour garantir l
 
 Git: Git est un système de contrôle de version utilisé pour suivre les modifications du code source et faciliter la collaboration entre les développeurs. Dans ce projet, Git est utilisé pour gérer les différentes versions du code et permettre la collaboration via des branches et des demandes de fusion.
 
-Installation
-Clonez ce dépôt sur votre machine locale.
+Installation & Utilisation
 
-Copy code
-git clone https://github.com/annemarchasson/SpacewP2.git
-Accédez au répertoire du projet.
+Pour commencer un projet
+Sur VSCode, installer les plugins Prettier - Code formatter et ESLint et les configurer
+Cloner ce dépôt, se rendre à l'intérieur
+Si vous utilisez yarn ou pnpm, adapter config/cli dans le fichier package.json
+Lancer la commande npm install
+NB: Pour exécuter le backend, un fichier d'environnement avec les données de connexion d'une BdD valide est nécesaire. Un modèle se trouve dans backend/.env.sample
 
-Copy code
-cd SpacewP2
-Installez les dépendances en exécutant la commande suivante :
+Liste des commandes et signification
 
-Copy code
-npm install
-Lancez l'application en mode développement :
+migrate : Exécute le script de création de la base de données
+dev : Démarrage des deux serveurs (frontend + backend) dans un même terminal
+dev-front : Démarrage d'un serveur React pour le frontend
+dev-back : Démarrage d'un serveur Express pour le backend
+lint : Exécute des outils de validation de code (sera exécutée automatiquement à chaque commit)
+fix : Fixe les erreurs de formatage (à lancer si lint ne passe pas)
+Pour plus d'informations
 
-Copy code
-npm start
-Accédez à l'application dans votre navigateur en visitant l'URL http://localhost:3000
+Listing des outils utilisés
 
+Concurrently : Permet d'exécuter plusieurs commandes dans un même terminal
+Husky : Permet d'exécuter des actions en déclenchement de commandes git
+Vite : Alternative à Create-React-App, embarquant moins de packages pour une expérience plus fluide
+ESLint : Outil de "qualité de code", permet de s'assurer que des règles pré-configurées sont bien respectées
+Prettier : Outil de "qualité de code" également, se concentre plus particulièrement sur le style du code
+Standard Airbnb : L'un des "standards" les plus connus, même s'il n'est pas officiellement lié à ES/JS
+Nodemon : Outil permettant de relancer un serveur à chaque fois qu'un des fichiers est modifié
 
 Auteurs
 Anne Marchasson - @annemarchasson
