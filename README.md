@@ -1,44 +1,54 @@
-## Concept
+SpacewP2
+![logonav](https://github.com/annemarchasson/SpacewP2/assets/66382092/821d915e-4fae-4cb0-af17-b5e1b1965f43)
 
-This template is meant to serve as a foundation for every P2/P3 following the React-Express-MySQL stack, as learned in Wild Code School.
-It's pre-configured with a set of tools which'll help students produce industry-quality and easier-to-maintain code, while staying as simple as possible to use.
 
-## Setup & Use
+SpacewP2 est un projet React qui vise à créer un site web interactif dédié à l'exploration spatiale . Ce projet est le deuxième projet de groupe fait à la wild code school. L'objectif principal de ce projet est de vendre des tickets pour voyager dans l'espace et de fournir des informations et des actualités sur l'espace, ainsi que des images et des vidéos captivantes de l'univers. 
 
-### Project Initialization
+Fonctionnalités
+Affichage d'informations sur les vols spaciaux.
+Mise en avant d'actualités et d'événements liés à l'espace.
+Visualisation d'images et de vidéos de l'espace capturées par des télescopes et des sondes spatiales.
+![Capture d'écran 2023-06-18 190702](https://github.com/annemarchasson/SpacewP2/assets/66382092/901de789-2425-460a-a210-bdba1c8d55fd)
 
-- In VSCode, install plugins **Prettier - Code formatter** and **ESLint** and configure them
-- Clone this repo, enter it
-- If you are using `yarn` or `pnpm`, adapt the `config/cli` in `package.json`
-- Run command `npm install`
-- _NB: To launch the backend server, you'll need an environment file with database credentials. You'll find a template one in `backend/.env.sample`_
+Technologie:
 
-### Available Commands
+React: React est une bibliothèque JavaScript utilisée pour construire des interfaces utilisateur réactives et interactives. Dans ce projet, React est la base de développement pour la création de composants réutilisables et la gestion de l'état de l'application.
 
-- `migrate` : Run the database migration script
-- `dev` : Starts both servers (frontend + backend) in one terminal
-- `dev-front` : Starts the React frontend server
-- `dev-back` : Starts the Express backend server
-- `lint` : Runs validation tools, and refuses unclean code (will be executed on every _commit_)
-- `fix` : Fixes linter errors (run it if `lint` growls on your code !)
+HTML: HTML (HyperText Markup Language) est le langage de balisage utilisé pour structurer le contenu du site web. Dans ce projet, HTML est utilisé pour définir la structure des différentes pages et composants.
 
-## FAQ
+CSS: CSS (Cascading Style Sheets) est utilisé pour définir les styles et la présentation visuelle du site web. Dans ce projet, CSS est utilisé pour personnaliser l'apparence des éléments et créer des mises en page attrayantes.
 
-### Tools
+JavaScript: JavaScript est un langage de programmation utilisé pour ajouter des fonctionnalités et des comportements interactifs au site web. Dans ce projet, JavaScript est utilisé pour interagir avec l'API, gérer les événements et effectuer des opérations dynamiques côté client.
 
-- _Concurrently_ : Allows for several commands to run concurrently in the same CLI
-- _Husky_ : Allows to execute specific commands that trigger on _git_ events
-- _Vite_ : Alternative to _Create-React-App_, packaging less tools for a more fluid experience
-- _ESLint_ : "Quality of code" tool, ensures chosen rules will be enforced
-- _Prettier_ : "Quality of code" tool as well, focuses on the styleguide
-- _ Airbnb Standard_ : One of the most known "standards", even though it's not officially linked to ES/JS
-- _Nodemon_ : Allows to restart the server everytime a .js file is udated
+React Router: React Router est une bibliothèque de routage pour React qui permet de gérer la navigation dans une application à pages multiples. Dans ce projet, React Router est utilisé pour gérer les différentes routes et permettre la navigation entre les pages.
 
-### Deployment
+API REST: Une API REST (Representational State Transfer) est utilisée pour récupérer les données liées à l'exploration spatiale, telles que les informations sur les planètes, les étoiles, les galaxies, les actualités, les images, etc. L'application communique avec l'API REST pour obtenir les données nécessaires à l'affichage et à la fonctionnalité de l'application.
 
-For deployment, you have to go to `secrets` → app `actions` on the github repo to insert via `New repository secret` :
+Axios: Axios est une bibliothèque JavaScript utilisée pour effectuer des requêtes HTTP depuis le navigateur. Dans ce projet, Axios est utilisé pour envoyer des requêtes à l'API REST et récupérer les données nécessaires.
 
-- CAPROVER_BACK_APPNAME : name app on caprover
-- CAPROVER_FRONT_APPNAME : name app on caprover
-- CAPROVER_PASSWORD : password caprover
-- CAPROVER_SERVER : link of domain
+ESLint et Prettier: ESLint et Prettier sont des outils utilisés pour garantir la cohérence du code et appliquer les bonnes pratiques. Ils permettent de détecter et de corriger automatiquement les erreurs de syntaxe, les problèmes de style et les violations des conventions de codage.
+
+Git: Git est un système de contrôle de version utilisé pour suivre les modifications du code source et faciliter la collaboration entre les développeurs. Dans ce projet, Git est utilisé pour gérer les différentes versions du code et permettre la collaboration via des branches et des demandes de fusion.
+
+Installation
+Clonez ce dépôt sur votre machine locale.
+
+Copy code
+git clone https://github.com/annemarchasson/SpacewP2.git
+Accédez au répertoire du projet.
+
+Copy code
+cd SpacewP2
+Installez les dépendances en exécutant la commande suivante :
+
+Copy code
+npm install
+Lancez l'application en mode développement :
+
+Copy code
+npm start
+Accédez à l'application dans votre navigateur en visitant l'URL http://localhost:3000
+
+
+Auteurs
+Anne Marchasson - @annemarchasson
